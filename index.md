@@ -15,11 +15,11 @@ I hold [office hours](http://bueler.github.io/OffHrs.htm) in Chapman 306C.
 
 * Read the [Syllabus](assets/general/syllabus.pdf).
 
-* See the [Schedule](assets/general/schedule.pdf).  Check it often to find out what happens next!
+* See the [Schedule](assets/general/schedule.pdf).  Check it often for due dates, and to find out what happens next!
 
 * Check out the weekly [Homework](homework.html) assignments.
 
-* The [Canvas course page](https://canvas.alaska.edu/courses/7017) is important!  Go there for your grades and solutions.
+* The [Canvas course page](https://canvas.alaska.edu/courses/7017) is important!  Go there for uploading Homework, finding solutions, and seeing your grades.
 
 * You will want to see the [Resources](resources.html) page.
 
