@@ -56,4 +56,4 @@ I hold [office hours](http://bueler.github.io/OffHrs.htm) in Chapman 306C.
 [<img src="assets/images/matrix-squeeze.png" height="150">](https://en.wikipedia.org/wiki/Matrix_(mathematics)#Linear_transformations) "apply a squeeze matrix") &nbsp; &nbsp; [<img src="assets/images/least-squares.png" height="200">](https://en.wikipedia.org/wiki/Least_squares "least-squares fit a line") &nbsp; &nbsp; &nbsp; &nbsp; [<img src="assets/images/svd.png" height="200">](https://en.wikipedia.org/wiki/Singular_value_decomposition "picture the SVD")
 
 ---
-_Site design derived from [coordinated Calc I](https://uaf-math251.github.io/), an original [Jekyll](https://jekyllrb.com/) design by [David Maxwell](https://damaxwell.github.io/).
+_Site design derived from [coordinated Calc I](https://uaf-math251.github.io/), an original [Jekyll](https://jekyllrb.com/) design by [David Maxwell](https://damaxwell.github.io/)._
