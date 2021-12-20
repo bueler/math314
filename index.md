@@ -7,8 +7,6 @@ DRAFT!  DRAFT!
 
 Welcome to the homepage of **Math F314 Linear Algebra**, Spring 2022, in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
-[<img src="assets/images/GitHub-Mark-32px.png" align="right">](https://github.com/bueler/math314 "github repository for this site")
-
 #### Instructor:  [Ed Bueler](http://bueler.github.io/) ([elbueler@alaska.edu](mailto:elbueler@alaska.edu))
 
 I hold [office hours](http://bueler.github.io/OffHrs.htm) in Chapman 306C.
@@ -29,3 +27,5 @@ I hold [office hours](http://bueler.github.io/OffHrs.htm) in Chapman 306C.
 
 ---
 _Site design derived from [coordinated Calc I](https://uaf-math251.github.io/), an original [Jekyll](https://jekyllrb.com/) design by [David Maxwell](https://damaxwell.github.io/)._
+
+[<img src="assets/images/GitHub-Mark-32px.png" align="right">](https://github.com/bueler/math314 "github repository for this site")
