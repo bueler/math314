@@ -25,6 +25,8 @@ title: Resources
 
 * All in one picture: [Matrix world.](assets/images/matrix-world.pdf)
 
+* The YouTube phenom [3Blue1Brown](https://www.youtube.com/c/3blue1brown), a.k.a. Grant Sanderson, has a playlist of excellent [Essence of Linear Algebra videos](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab).
+
 * What are we studying?  See these Wikipedia pages:
    * [vectors](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))
    * [matrices](https://en.wikipedia.org/wiki/Matrix_(mathematics))
