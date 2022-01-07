@@ -3,19 +3,15 @@ layout: course-page
 title: Bueler's Math F314 Linear Algebra in Spring 2022 at UAF
 ---
 
-DRAFT!  DRAFT!
-
 Welcome to the homepage of **Math F314 Linear Algebra**, Spring 2022, in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
-#### Instructor:  [Ed Bueler](http://bueler.github.io/) ([elbueler@alaska.edu](mailto:elbueler@alaska.edu))
-
-I hold [office hours](http://bueler.github.io/OffHrs.htm) in Chapman 306C.
+#### Instructor:  [Ed Bueler](http://bueler.github.io/) ([elbueler@alaska.edu](mailto:elbueler@alaska.edu))  &nbsp; &nbsp; I hold [office hours](http://bueler.github.io/OffHrs.htm) in Chapman 306C.
 
 ### Getting Started
 
 * Read the [Syllabus](assets/general/syllabus.pdf).
 
-* See the [Schedule](assets/general/schedule.pdf).  Check it often for due dates, and to find out what happens next!
+* See the [Schedule](assets/general/schedule.pdf).  Check it often for due dates, and to see which topics come next!
 
 * Check out the weekly [Homework](homework.html) assignments.
 
