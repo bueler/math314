@@ -1,0 +1,266 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1.2in, bottom=0.9in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=1.0]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Syllabus for MATH F252X section 001 Spring 2022 (Bueler)},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH F314 Linear Algebra}}
+\chead{\large\sf\textbf{Syllabus}}
+\rhead{\large\sf\textbf{Spring 2022}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1} \smallskip\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+
+\strut\par\vskip-12pt
+\heading{Essential Information}
+
+\vskip -12pt
+\strut\hbox to \hsize{\tableindent\vtop{\halign{#\hfill\ts&#\hfil\cr
+{\emph{Instructor}} & Ed Bueler \quad \href{mailto:elbueler@alaska.edu}{\texttt{elbueler\@@alaska.edu}} \cr
+\strut & \cr
+{\emph{Course webpage}} & \href{https://bueler.github.io/math314/}{\texttt{bueler.github.io/math314/}}\cr
+\strut & \cr
+{\emph{Canvas site}} & \href{https://canvas.alaska.edu/courses/7017}{\texttt{canvas.alaska.edu/courses/7017}} \cr
+\strut & \cr
+\emph{Prerequisite} & MATH F252X Calculus II.\cr
+\strut & \cr
+{\emph{Required text}} & G.~Strang, \textit{Introduction to Linear Algebra}, 5th Edition,  \cr
+  & Wellesley-Cambridge Press 2016 \cr
+}
+\hfil}}
+
+\heading{Description, Course Goals \& Student Learning Outcomes}
+Linear algebra is the branch of mathematics which covers vectors, matrices, and linear equations.  It is central to all areas of applied (and pure) mathematics because vectors are the essential way to precisely-describe complicated things by using many real numbers.  Linear algebra is used in most sciences and fields of engineering because it allows modeling many natural phenomena, and computing efficiently with such models.  Even nonlinear systems, which cannot be modeled with linear algebra, are approximated at first-order by linear algebra objects, especially derivatives.
+
+All real-world linear algebra problems are solved using computers.  In this course will use, and introduce, Matlab for this purpose.  While Matlab was designed for teaching linear algebra, it is now a standard tool for engineering and science, and you may be expected to use it in your other courses.
+
+By the end of the course you should have a solid understanding of the fundamental concepts and algorithms of linear algebra, including some well-known theorems and matrix factorizations.  You will have seen several significant applications in diverse fields. You will be well-equipped to use linear algebra in more-advanced mathematics, and to use vectors and matrices in the scientific and engineering fields which require them.
+
+\heading{Class Time}
+There are three hours of class meetings with your instructor every week:
+\begin{itemize}
+\item MWF 9:15 am -- 10:15 pm  Gruening 413
+\end{itemize}
+
+FIXME FROM HERE
+
+%\strut \vspace{-12pt}
+\heading{Schedule and Online Materials}
+The course website contains a \href{https://bueler.github.io/calc2/schedule.pdf}{Schedule} listing the textbook sections to be covered each class, the dates each Homework is due, plus the dates for Quizzes and Exams. You should consult this schedule frequently.  I will announce any Schedule adjustments in class.
+
+Most course materials (Syllabus, old Quiz and Exam solutions, study materials, etc.) will be posted on the \href{https://bueler.github.io/calc2/}{course webpage}.  Some course materials (grades, Homework solutions, announcements, etc.) will be available on the \href{https://canvas.alaska.edu/courses/7049}{Canvas site}.  Each website links to the other.
+
+
+\heading{Office Hours and Communication}
+My Office Hours are online at \href{http://bueler.github.io/OffHrs.htm}{\texttt{bueler.github.io/OffHrs.htm}}.  Students can also schedule meetings with me outside of regular office hours. 
+
+I will use Canvas to send announcements.  If I need to contact you outside of class times, I'll try to email via Canvas.  Please set the email address in Canvas to one that you check regularly!
+
+
+\heading{Evaluation and Grades}
+Grades are determined as follows.  (Each component of the grade is discussed below.)
+ 
+\begin{multicols}{2}
+\begin{tabular}{|c|c|}
+\hline
+Class Attendance & 5\%\\
+\hline
+Homework & 10\% \\
+\hline
+Quizzes & 20\% \\
+\hline
+Midterm Exam 1 & 20\% \\
+\hline
+Midterm Exam 2 & 20\%  \\
+\hline
+Final Exam & 25\% \\
+\hline
+total & 100\% \, \\
+\hline
+\end{tabular}
+
+%\vskip 6pt
+
+\begin{tabular}{llll}
+A  & 93--100\%& C  & 68--75\%  \\
+A- & 90--92\% & C- & not given \\
+B+ & 87--89\% & D+ & 65--67\%  \\
+B  & 82--86\% & D  & 60--65\%  \\
+B- & 79--81\% & D- & 57--59\%  \\
+C+ & 76--78\% & F  & $\le$ 56\%
+\end{tabular}
+\end{multicols}
+
+These ranges are a guarantee and a lower bound. I reserve the right to increase your grade above these ranges based on the actual difficulty of the work and/or on average class performance. Any such increases will preserve grade ordering by weighted total score. 
+
+
+\heading{Class Attendance and Participation}
+Attendance and participation is an important part of mastering the material, and a strong predictor of overall course performance in any subject.  At the start of each class you will need to initial an attendance sheet.  Let me know if you will miss class for any reason.
+
+
+\heading{Homework}
+Homework assignments consist of a selection of problems from the textbook.  Homework is written, on paper or tablet, and turned in as a PDF via Gradescope, accessed via Canvas.  (Help with scanning homework can be found on the \href{https://uaf-math251.github.io/techHelp.html}{Tech Help} webpage.)  Assignments are due most Mondays and Wednesdays (by 11:59pm) in advance of the Thursday Quiz.  The list of Homework problems is at the \href{https://bueler.github.io/calc2/writtenhomework.html}{Homework} webpage.  See the \href{https://bueler.github.io/calc2/schedule.pdf}{Schedule} for due dates.
+
+Complete worked solutions to all Homework problems are \emph{provided in advance on the Canvas site}, so Homework will be graded based on \emph{effort} and \emph{completion}.  All students should earn 100\% of their homework points!  Of course, it is possible, and pathetic, to defeat the purpose of the homework by copying the solutions.  This is a bad idea: the grader/instructor will know you have done so, and Homework is only 10\% of your grade so it is not worthwhile.  The Homework exists so you can \emph{learn}.
+
+
+\heading{Quizzes}
+A weekly Quiz will be given on Thursdays in the middle third of the 1.5 hour class.  Each Quiz will cover material since the previous Quiz.  The Quizzes are given under Exam conditions: books, notes, and calculators are not allowed.  Performance on Quizzes is your best indicator of how well you are learning the course material (and much better than your Homework score).
+
+Make-up Quizzes will be given only for documented extenuating circumstances, at my discretion.  Always contact me if you will miss a Quiz!
+
+Students will be given the opportunity to grade and correct their Quizzes in the last third of the Thursday class and can earn back points up to half the missed points for doing so \emph{accurately}.
+
+
+\heading{Midterm Exams}
+There are two Midterm Exams this semester, to be held on the dates in the schedule on the course website: \emph{Midterm Exam 1 on Thursday February 17} and \emph{Midterm Exam 2 on Thursday April 7}.  Midterms are given during the class time.
+
+Make-up Midterms will be given only for documented extenuating circumstances, at my discretion.
+
+
+\heading{Final Exam} 
+The cumulative Final Exam will be held at the day/time listed in the online schedule: \textbf{10:15-12:15 Wednesday April 27}.
+
+
+\heading{Tutoring and Resources}
+\vskip -30pt\strut
+\begin{clist}
+	\item The Math and Stat Lab, Chapman Building Room 305, offers tutors. 
+	See 
+
+	\href{http://www.uaf.edu/dms/mathlab/}{\texttt{www.uaf.edu/dms/mathlab/}} for schedules and availability.
+	\item Free
+one-on-one (or small group) tutoring is available in 
+Chapman Building Room 201. You must schedule an
+appointment; see \href{http://www.uaf.edu/dms/mathlab/}{\texttt{www.uaf.edu/dms/mathlab/}}.
+	\item Student Support Services (\href{https://uaf.edu/sss/}{\texttt{uaf.edu/sss/}}) offers free tutoring in many subjects to students who qualify for their program.
+	\item ASUAF (\href{https://uaf.edu/asuaf/}{\texttt{uaf.edu/asuaf/}}) offers private tutoring for a small fee, based on student income.
+\end{clist}
+
+\heading{Rules and Policies}
+\vskip -20pt
+
+\subheading{Incomplete Grade} 
+Incomplete (I) will only be given in
+  DMS courses in cases where
+  the student has completed the majority (normally all but the last
+  three weeks) of a course with a grade of C or better, but for
+  personal reasons beyond his/her control has been unable to complete
+  the course during the regular term. Negligence or indifference are
+  not acceptable reasons for the granting of an incomplete
+  grade. 
+
+\clearpage\newpage
+\subheading{Late Withdrawals} 
+A withdrawal after the deadline
+  (currently 9 weeks into the semester) from a DMS course will
+  normally be granted only in cases where the student is performing
+  satisfactorily (i.e., C or better) in a course, but has exceptional
+  reasons, beyond his/her control, for being unable to complete the
+  course. These exceptional reasons should be detailed in writing to
+  the instructor, department head and dean.
+
+\subheading{No Early Final Examinations}
+Final examinations for DMS
+  courses shall not be held earlier than the date and time published
+  in the official term schedule. Normally, a student will not be
+  allowed to take a final exam early. Exceptions can be made by
+  individual instructors, but should only be allowed in exceptional
+  circumstances and in a manner which doesn't endanger the security of
+  the exam.
+
+\subheading{Academic Dishonesty}
+Academic dishonesty, including cheating and plagiarism, will not
+be tolerated.  It is a violation of the Student Code of Conduct
+and will be punished according to UAF procedures.
+
+%\begin{center} \textsc{Syllabus Addendum} \end{center}
+ 
+\subheading{COVID-19 statement}
+Students should keep up-to-date on the university's policies, practices, and mandates related to COVID-19 by regularly checking this website:
+
+\href{https://sites.google.com/alaska.edu/coronavirus/uaf?authuser=0}{\texttt{sites.google.com/alaska.edu/coronavirus/uaf}}
+
+Students are expected to adhere to the university's policies, practices, and mandates and are subject to disciplinary actions if they do not comply.
+
+\subheading{Student protections statement}
+UAF embraces and grows a culture of respect, diversity, inclusion, and caring. Students at this university are protected against sexual harassment and discrimination (Title IX). Faculty members are designated as responsible employees which means they are required to report sexual misconduct. For more information on your rights as a student and the resources available to you to resolve problems, please go to the following site:
+
+\href{https://catalog.uaf.edu/academics-regulations/students-rights-responsibilities/}{\texttt{catalog.uaf.edu/academics-regulations/students-rights-responsibilities/}}
+
+\subheading{Disability services statement}
+I will work with the Office of Disability Services (\href{https://www.uaf.edu/disabilityservices/}{\texttt{www.uaf.edu/disabilityservices/}}) to provide reasonable accommodation to students with disabilities.
+
+\subheading{Student Academic Support}
+
+\vspace{-7mm}
+\begin{itemize}
+\item Speaking Center (907-474-5470, \mailto{uaf-speakingcenter@alaska.edu}, Gruening 507)
+\item Writing Center (907-474-5314, \mailto{uaf-writing-center@alaska.edu}, Gruening 8th floor)
+\item UAF Math Services, Chapman 210 (\href{http://www.uaf.edu/dms/mathlab/}{\texttt{www.uaf.edu/dms/mathlab/}})
+\item Developmental Math Lab, Gruening 406
+\item The Debbie Moses Learning Center at CTC (907-455-2860, 604 Barnette St, Room 120, (\href{https://www.ctc.uaf.edu/student-services/student-success-center/}{\texttt{ctc.uaf.edu/student-services/student-success-center/}})
+\item For more information and resources, please see the Academic Advising Center Student Resources list (\href{https://www.uaf.edu/advising/student-resources/}{\texttt{www.uaf.edu/advising/student-resources/}}).
+\end{itemize}
+
+\subheading{Student Resources}
+
+\vspace{-7mm}
+\begin{itemize}
+\item Disability Services (907-474-5655, \mailto{uaf-disability-services@alaska.edu}, Whitaker 208)
+\item Student Health \& Counseling [6 free counseling sessions] (907-474-7043, \href{https://www.uaf.edu/chc/}{\texttt{www.uaf.edu/chc/}}, Whitaker 203)
+\item Center for Student Rights and Responsibilities (907-474-7317, \mailto{uaf-studentrights@alaska.edu}, Eielson 110)
+\item Associated Students of the University of Alaska Fairbanks (ASUAF) or ASUAF Student Government (907-474-7355, \mailto{asuaf.office@alaska.edu}, Wood Center 119)
+\end{itemize}
+
+\subheading{Nondiscrimination statement}
+The University of Alaska is an affirmative action/equal opportunity employer and educational institution. The University of Alaska does not discriminate on the basis of race, religion, color, national origin, citizenship, age, sex, physical or mental disability, status as a protected veteran, marital status, changes in marital status, pregnancy, childbirth or related medical conditions, parenthood, sexual orientation, gender identity, political affiliation or belief, genetic information, or other legally protected status. The University's commitment to nondiscrimination, including against sex discrimination, applies to students, employees, and applicants for admission and employment. Contact information, applicable laws, and complaint procedures are included on UA's statement of nondiscrimination available at www.alaska.edu/nondiscrimination. For more information, contact:
+
+\begin{tabular}{l}
+UAF Department of Equity and Compliance\\
+1760 Tanana Loop, 355 Duckering Building, Fairbanks, AK  99775\\
+907-474-7300 \quad \mailto{uaf-deo@alaska.edu}
+\end{tabular}
+
+\hfill  \scriptsize [syllabus version: \today] \normalsize
+
+\end{document}
