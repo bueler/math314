@@ -11,14 +11,14 @@ docs:
 - title: Homework
   url: homework.html
 
-- title: Quizzes
-  url: quizzes.html
+#- title: Quizzes
+#  url: quizzes.html
 
-- title: Exams
-  url: exams.html
+#- title: Exams
+#  url: exams.html
 
-- title: Worksheets
-  url: worksheets.html
+#- title: Worksheets
+#  url: worksheets.html
 
 - title: Resources
   url: resources.html
