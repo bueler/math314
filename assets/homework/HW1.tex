@@ -1,0 +1,128 @@
+\documentclass[12pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-.65in} 
+\addtolength{\evensidemargin}{-.65in}
+\addtolength{\topmargin}{-.4in}
+\addtolength{\textwidth}{1.4in}
+\addtolength{\textheight}{0.8in}
+
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage{xspace}
+\usepackage{verbatim,fancyvrb}
+\usepackage{palatino}
+\usepackage[final]{graphicx}
+\usepackage[pdftex,colorlinks=True]{hyperref}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\newcommand{\mfile}[1]{
+\begin{quote}
+\bigskip
+\VerbatimInput[frame=single,framesep=3mm,label=\fbox{\normalsize \textsl{\,#1\,}},fontfamily=courier,fontsize=\footnotesize]{../matlab/#1}
+\medskip
+\end{quote}
+}
+
+%\DefineVerbatimEnvironment{mVerb}{Verbatim}{numbersep=2mm,frame=lines,framerule=0.1mm,framesep=2mm,xleftmargin=4mm,fontsize=\footnotesize}
+\DefineVerbatimEnvironment{mVerb}{Verbatim}{numbersep=2mm,xleftmargin=4mm,fontsize=\footnotesize}
+
+% macros
+\usepackage{amssymb}
+
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bz}{\mathbf{z}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+
+\newcommand{\image}{\operatorname{im}}
+\newcommand{\onull}{\operatorname{null}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+\newcommand{\trace}{\operatorname{tr}}
+
+\newcommand{\ds}{\displaystyle}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1}\quad }
+\newcommand{\exer}[1]{\prob{Exercise #1}}
+
+\newcommand{\probset}[2]{\prob{from Problem Set #1, pages #2:}}
+
+\newcommand{\pts}[1]{(\emph{#1 pts}) }
+\newcommand{\epart}[1]{\medskip\noindent\textbf{(#1)}\quad }
+\newcommand{\ppart}[1]{\,\textbf{(#1)}\quad }
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+\newcommand{\Python}{\textsc{Python}\xspace}
+\newcommand{\Julia}{\textsc{Julia}\xspace}
+
+
+\begin{document}
+\scriptsize \noindent Math 314 Linear Algebra (Bueler) \hfill \emph{Due Wed 1/19/22}
+\normalsize\medskip
+
+\Large
+\centerline{\textbf{Homework \#1}}
+
+\normalsize
+\bigskip
+\begin{quote}
+Due Wednesday 19 January, 2022 at 11:59pm.
+
+\medskip
+\noindent Submit as a single PDF by using Gradescope, via the course Canvas site
+
+\href{https://canvas.alaska.edu/courses/7017}{\texttt{canvas.alaska.edu/courses/7017}}
+
+\noindent Problems from the textbook (Strang, \emph{Intro Linear Algebra}, 5th ed.~2016) will be graded for completion, while the ``\textbf{P}'' problems will be graded for correctness.  Answers/solutions to textbook problems are linked at
+
+\href{https://bueler.github.io/math314/resources.html}{\texttt{bueler.github.io/math314/resources.html}}
+\end{quote}
+\medskip
+
+\thispagestyle{empty}
+
+\bigskip
+
+\probset{1.1}{8--10} \# 2, 6, 8, 11, 13, 22, 31
+
+\probset{1.2}{18--21} \# 1, 2, 3, 4, 6, 14, 21, 34
+
+\prob{P1.}  If $\ds \bv - \bw = \begin{bmatrix} 4 \\ 1 \end{bmatrix}$ and $\ds \bv + \bw = \begin{bmatrix} 3 \\ 2 \end{bmatrix}$, compute and draw the vectors $\bv$ and $\bw$.
+
+\prob{P2.}  What linear combination $\ds c \begin{bmatrix} 4 \\ 1 \end{bmatrix} + d \begin{bmatrix} 3 \\ 2 \end{bmatrix}$ produces $\ds \begin{bmatrix} 7 \\ 8 \end{bmatrix}$?  Express this question as two equations for the coefficients $c$ and $d$, and find $c,d$.
+
+\prob{P3.}  Two opposite corners of a unit cube in 4 dimensions are $(0,0,0,0)$ and $(1,1,1,1)$.  All corners have coordinates that are either $0$ or $1$.  How many corners are there?  How many edges?  How many ``3D faces'', which are themselves 3-dimensional cubes?
+
+\prob{P4.}  Find nonzero vectors $\bv$ and $\bw$ which are perpendicular to $(-1,0,1)$ and to each other.
+
+\prob{P5.}  True or false?  If true give an explanation.  If false give a counterexample:
+\renewcommand{\labelenumi}{(\alph{enumi})\,}
+\begin{enumerate}
+\item If $\bu$ is perpendicular to $\bv$ and $\bw$, then $\bu$ is perpendicular to $2\bv-\bw$.
+\item If $\bu$ and $\bv$ are perpendicular unit vectors then $\|\bu+\bv\|=\sqrt{2}$.
+\item If $\bu = (-1,1,-1)$ is perpendicular to $\bv$ and $\bw$, then $\bv$ is parallel to $\bw$.
+\end{enumerate}
+
+\prob{P6.}  Draw a parallelogram with sides $\bv$ and $\bw$.  Then show that the squared diagonal lengths $\|\bv + \bw\|^2 + \|\bv - \bw\|^2$ add to the sum of the four squared side lengths, that is, $2\|\bv\|^2+2\|\bw\|^2$.
+
+\end{document}
