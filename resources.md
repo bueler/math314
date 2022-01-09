@@ -21,11 +21,11 @@ title: Resources
   * [Chapter 11](https://math.mit.edu/~gs/linearalgebra/ila_sol5_ch11.pdf)
   * [Chapter 12](https://math.mit.edu/~gs/linearalgebra/ila_sol5_ch12.pdf)
 
-* Strang also has a [sequence of 34 video lectures on linear algebra](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/).  They are organized by topic, and so it does not matter that they do not align to the current textbook perfectly.
+* Strang also made [34 video lectures on linear algebra](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/).  They are organized by topic; they do not align to the current textbook perfectly.
 
 * All in one picture: [Matrix world.](assets/images/matrix-world.pdf)
 
-* The YouTube phenom [3Blue1Brown](https://www.youtube.com/c/3blue1brown), a.k.a. Grant Sanderson, has a playlist of excellent [Essence of Linear Algebra videos](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab).
+* youtuber [3Blue1Brown](https://www.youtube.com/c/3blue1brown), a.k.a. Grant Sanderson, has excellent [Essence of Linear Algebra videos](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab).
 
 * What are we studying?  See these Wikipedia pages:
    * [vectors](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))
