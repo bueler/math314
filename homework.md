@@ -13,7 +13,7 @@ The problems from the textbook will be graded for completion.  (Solutions are al
 
 * [HW1, due 11:59pm on Wed Jan 19](assets/homework/HW1.pdf)
 
-* HW2, due 11:59pm on Mon Jan 24 FIXME
+* [HW2, due 11:59pm on Mon Jan 24](assets/homework/HW2.pdf)
 
 * HW3, due 11:59pm on Mon Jan 31 FIXME
 

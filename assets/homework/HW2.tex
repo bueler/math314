@@ -1,0 +1,132 @@
+\documentclass[12pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-.65in} 
+\addtolength{\evensidemargin}{-.65in}
+\addtolength{\topmargin}{-.4in}
+\addtolength{\textwidth}{1.4in}
+\addtolength{\textheight}{0.8in}
+
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage{xspace,bm}
+\usepackage{verbatim,fancyvrb}
+\usepackage{palatino}
+\usepackage[final]{graphicx}
+\usepackage[pdftex,colorlinks=True]{hyperref}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\newcommand{\mfile}[1]{
+\begin{quote}
+\bigskip
+\VerbatimInput[frame=single,framesep=3mm,label=\fbox{\normalsize \textsl{\,#1\,}},fontfamily=courier,fontsize=\footnotesize]{../matlab/#1}
+\medskip
+\end{quote}
+}
+
+%\DefineVerbatimEnvironment{mVerb}{Verbatim}{numbersep=2mm,frame=lines,framerule=0.1mm,framesep=2mm,xleftmargin=4mm,fontsize=\footnotesize}
+\DefineVerbatimEnvironment{mVerb}{Verbatim}{numbersep=2mm,xleftmargin=4mm,fontsize=\footnotesize}
+
+% macros
+\usepackage{amssymb}
+
+\newcommand{\ba}{\bm{a}}
+\newcommand{\bb}{\bm{b}}
+\newcommand{\bc}{\bm{c}}
+\newcommand{\br}{\bm{r}}
+\newcommand{\bu}{\bm{u}}
+\newcommand{\bv}{\bm{v}}
+\newcommand{\bw}{\bm{w}}
+\newcommand{\bx}{\bm{x}}
+\newcommand{\by}{\bm{y}}
+\newcommand{\bz}{\bm{z}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+
+\newcommand{\image}{\operatorname{im}}
+\newcommand{\onull}{\operatorname{null}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+\newcommand{\trace}{\operatorname{tr}}
+
+\newcommand{\ds}{\displaystyle}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1}\quad }
+
+\newcommand{\probset}[2]{\prob{from Problem Set #1, pages #2:}}
+
+\newcommand{\pts}[1]{(\emph{#1 pts}) }
+\newcommand{\epart}[1]{\medskip\noindent\textbf{(#1)}\quad }
+\newcommand{\ppart}[1]{\,\textbf{(#1)}\quad }
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+
+
+\begin{document}
+\scriptsize \noindent Math 314 Linear Algebra (Bueler) \hfill \emph{Due Mon 1/24/22}
+\normalsize\medskip
+
+\Large
+\centerline{\textbf{Homework \#2}}
+
+\normalsize
+\bigskip
+\begin{quote}
+Due Monday 24 January, 2022 at 11:59pm.
+
+\medskip
+\noindent Submit as a single PDF by using Gradescope, via the course Canvas site
+
+\href{https://canvas.alaska.edu/courses/7017}{\texttt{canvas.alaska.edu/courses/7017}}
+
+\noindent Problems from the textbook (Strang, \emph{Intro Linear Algebra}, 5th ed.~2016) will be graded for completion, while the ``\textbf{P}'' problems will be graded for correctness.  Answers/solutions to textbook problems are linked at
+
+\href{https://bueler.github.io/math314/resources.html}{\texttt{bueler.github.io/math314/resources.html}}
+\end{quote}
+\medskip
+
+\thispagestyle{empty}
+
+\bigskip
+
+\probset{1.3}{29--30} \# 1, 3, 8, 14
+
+\probset{2.1}{41--45} \# 1, 4, 8, 13, 17, 18, 22, 23, 26, 34
+
+\prob{P7.}  \ppart{a} Solve this equation $S \by = \bb$ for $\by$.  Note $S$ is a \emph{sum matrix}.
+    $$\begin{bmatrix} 1 & 0 & 0 & 0 \\ 1 & 1 & 0 & 0 \\ 1 & 1 & 1 & 0 \\ 1 & 1 & 1 & 1 \end{bmatrix} \begin{bmatrix} y_1 \\ y_2 \\ y_3 \\ y_4 \end{bmatrix} = \begin{bmatrix} 3 \\ 4 \\ 8 \\ 9 \end{bmatrix}.$$
+
+\epart{b} Solve this equation $M \by = \bb$ for $\by$.  Note $M$ is a \emph{difference matrix}.
+    $$\begin{bmatrix} 1 & 0 & 0 & 0 \\ -1 & 1 & 0 & 0 \\ 0 & -1 & 1 & 0 \\ 0 & 0 & -1 & 1 \end{bmatrix} \begin{bmatrix} y_1 \\ y_2 \\ y_3 \\ y_4 \end{bmatrix} = \begin{bmatrix} 3 \\ 1 \\ 4 \\ 1 \end{bmatrix}.$$
+
+\epart{c} If I take any vector $\bu$ and first multiply it by $M$ from part \textbf{(b)} to get $M\bu=\bv$, and then I multiply $\bv$ by $S$ from part \textbf{(a)} to get $S\bv=\bw$, what is $\bw$?
+
+\prob{P8.}  Here are three vectors:
+    $$\bv_1 = \begin{bmatrix} 2 \\ 3 \\ 4 \end{bmatrix}, \qquad \bv_2 = \begin{bmatrix} -1 \\ 0 \\ 1 \end{bmatrix}, \qquad \bv_3 = \begin{bmatrix} 5 \\ 6 \\ 7 \end{bmatrix}.$$
+One may create the zero vector from the linear combination $x_1 \bv_1 + x_2 \bv_2 + x_3 \bv_3$ by choosing $x_1=x_2=x_3=0$, but that is obvious and boring.  Instead, choose $x_1=1$ and find $x_2$ and $x_3$ so that the linear combination is again the zero vector.  Does this show that the three vectors are independent or dependent?  The three vectors lie in a \underline{\phantom{kdafjlas afds}}.  (Note that the matrix $V$ formed from these vectors is \emph{not invertible}.)
+
+\prob{P9.}  \ppart{a} Compute this matrix-vector product by using dot products of the rows with the column vector:
+    $$\begin{bmatrix} 3 & -1 & 0 & 0 \\ -1 & 3 & -1 & 0 \\ 0 & -1 & 3 & -1 \\ 0 & 0 & -1 & 3 \end{bmatrix} \begin{bmatrix} 1 \\ 3 \\ 1 \\ 2 \end{bmatrix}.$$
+
+\epart{b}  Compute the same matrix-vector product by a linear combination of the columns of the matrix.
+
+\prob{P10.}  \ppart{a} What $2$ by $2$ matrix $R$ rotates every vector counter-clockwise by $90^\circ$?  (Note $R$ times $\begin{bmatrix} x \\ y \end{bmatrix}$ is $\begin{bmatrix} y \\ -x \end{bmatrix}$.)
+
+\epart{b} What $2$ by $2$ matrix $S$ rotates every vector by $180^\circ$?
+
+\epart{c} Show that for any vector $\bu$, $R(R\bu) = S\bu$.
+\end{document}
