@@ -1,0 +1,156 @@
+\documentclass[12pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-.65in} 
+\addtolength{\evensidemargin}{-.65in}
+\addtolength{\topmargin}{-.4in}
+\addtolength{\textwidth}{1.4in}
+\addtolength{\textheight}{0.8in}
+
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage{xspace,bm}
+\usepackage{verbatim,fancyvrb}
+\usepackage{palatino}
+\usepackage[final]{graphicx}
+\usepackage[pdftex,colorlinks=True]{hyperref}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\newcommand{\mfile}[1]{
+\begin{quote}
+\bigskip
+\VerbatimInput[frame=single,framesep=3mm,label=\fbox{\normalsize \textsl{\,#1\,}},fontfamily=courier,fontsize=\footnotesize]{../matlab/#1}
+\medskip
+\end{quote}
+}
+
+%\DefineVerbatimEnvironment{mVerb}{Verbatim}{numbersep=2mm,frame=lines,framerule=0.1mm,framesep=2mm,xleftmargin=4mm,fontsize=\footnotesize}
+\DefineVerbatimEnvironment{mVerb}{Verbatim}{numbersep=2mm,xleftmargin=4mm,fontsize=\footnotesize}
+
+% macros
+\usepackage{amssymb}
+
+\newcommand{\ba}{\bm{a}}
+\newcommand{\bb}{\bm{b}}
+\newcommand{\bc}{\bm{c}}
+\newcommand{\br}{\bm{r}}
+\newcommand{\bu}{\bm{u}}
+\newcommand{\bv}{\bm{v}}
+\newcommand{\bw}{\bm{w}}
+\newcommand{\bx}{\bm{x}}
+\newcommand{\by}{\bm{y}}
+\newcommand{\bz}{\bm{z}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+
+\newcommand{\image}{\operatorname{im}}
+\newcommand{\onull}{\operatorname{null}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+\newcommand{\trace}{\operatorname{tr}}
+
+\newcommand{\ds}{\displaystyle}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1}\quad }
+
+\newcommand{\probset}[2]{\prob{from Problem Set #1, pages #2:}}
+
+\newcommand{\pts}[1]{(\emph{#1 pts}) }
+\newcommand{\epart}[1]{\medskip\noindent\textbf{(#1)}\quad }
+\newcommand{\ppart}[1]{\,\textbf{(#1)}\quad }
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+
+
+\begin{document}
+\scriptsize \noindent Math 314 Linear Algebra (Bueler) \hfill Spring 2022
+\normalsize\medskip
+
+\Large
+\centerline{\textbf{Homework \#3}}
+
+\normalsize
+\bigskip
+\begin{quote}
+Due Monday 31 January, 2022 at 11:59pm.
+
+\medskip
+\noindent Submit as a single PDF by using Gradescope, via
+
+\href{https://canvas.alaska.edu/courses/7017}{\texttt{canvas.alaska.edu/courses/7017}}
+
+\noindent Problems from the textbook (Strang, \emph{Intro Linear Algebra}, 5th ed.~2016) will be graded for completion, while the ``\textbf{P}'' Problems will be graded for correctness.  Answers/solutions to Textbook Problems are linked at
+
+\href{https://bueler.github.io/math314/resources.html}{\texttt{bueler.github.io/math314/resources.html}}
+\end{quote}
+\medskip
+
+\thispagestyle{empty}
+
+\noindent \hrulefill
+
+\noindent \emph{Put these Textbook Problems first on your PDF, in this order.}
+
+\probset{2.2}{53--57} \# 1, 4, 6, 9, 11, 12, 14, 21, 27
+
+\probset{2.3}{66--69} \# 1, 3, 4, 12, 19, 24, 28, 29
+
+
+\bigskip
+\noindent \hrulefill
+
+\noindent \emph{Put these ``P'' Problems next on your PDF, in this order.}
+
+\prob{P11.}  \ppart{a} Complete the right side to get a system which has no solutions:
+\begin{align*}
+8 x - 4 y &= 14 \\
+-2 x + y &= \fbox{\strut \quad}
+\end{align*}
+(\emph{There are many correct answers.})
+
+\epart{b} Complete the right side to get a system which has infinitely-many solutions.  (\emph{There is only one correct answer.})
+
+\epart{c} Write down two different solutions to the system in part \textbf{(b)}.
+
+\prob{P12.}  Find three possible original problems (linear systems) so that elimination leads to $x-y=1$ and $2y = -3$.
+
+\prob{P13.}  Suppose we start with some 4 by 4 matrix $A$.
+
+\epart{a} $E_{21}$ subtracts row 1 from row 2 and then $P_{24}$ exchanges rows 2 and 4.  What matrix $M=P_{24} E_{21}$ does both steps at once?
+
+\epart{b} $P_{24}$ exchanges rows 2 and 4 and then $E_{41}$ subtracts row 1 from row 4. What matrix $N=E_{41} P_{24}$ does both steps at once?
+
+\epart{c} Explain why $M=N$.
+
+\prob{P14.}  Elimination on this 4 by 4 matrix $Z$ will need matrices $E_{21}$, $E_{32}$, and $E_{43}$.  What are these matrices?
+    $$Z = \begin{bmatrix} 2 & -1 & 0 & 0 \\ 1 & 2 & -1 & 0 \\ 0 & 1 & 2 & -1 \\ 0 & 0 & 1 & 3 \end{bmatrix}$$
+
+\prob{P15.}  Consider the matrices
+    $$A = \begin{bmatrix} 1 & 0 & 0 \\ a & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}, \qquad B = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & b & 1 \end{bmatrix}.$$
+
+\epart{a} Compute $AB$ and $BA$.  Are they the same?
+
+\epart{b} Give formulas for $A^n$ and $B^n$ if $n\ge 1$ is an integer.  (\emph{Hint.} Compute $A^2,A^3$ and $B^2,B^3$.  What is the pattern?)
+
+\prob{P16.}  Consider this system $Ax=\bb$:
+    $$\begin{bmatrix} 1 & 2 & 3 \\ 2 & 5 & 1 \\ 3 & 7 & 4 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \\ 6 \end{bmatrix}$$
+
+\epart{a}  Apply elimination to the augmented matrix $\left[A\,\, \bb\right]$.  How do you know this system has no solution?
+
+\epart{b}  Change the last number 6 so that the new system does have a solution.  Find a solution of the new system.
+
+\end{document}
