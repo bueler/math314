@@ -13,12 +13,4 @@ The problems from the textbook will be graded for completion.  (Solutions are al
 
 The "P" problems on each assignment will be graded for correctness.
 
-* [HW1, due 11:59pm on Wed Jan 19](assets/homework/HW1.pdf)
-
-* [HW2, due 11:59pm on Mon Jan 24](assets/homework/HW2.pdf)
-
-* [HW3, due 11:59pm on Mon Jan 31](assets/homework/HW3.pdf)
-
-* HW4, due 11:59pm on Mon Feb 7 FIXME
-
-* FIXME
+{% include homework_table.md  data=site.data.homework %}

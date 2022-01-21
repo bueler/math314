@@ -1,0 +1,15 @@
+semester: Spring 2022
+home: assets/homework
+worksheets:
+- name: HW1
+  due: 11:59pm on Wed Jan 19
+  blank: HW1.pdf
+- name: HW2
+  due: 11:59pm on Mon Jan 24
+  blank: HW2.pdf
+- name: HW3
+  due: 11:59pm on Mon Jan 31
+  blank: HW3.pdf
+- name: HW4
+  due: 11:59pm on Mon Feb 7
+  #blank: HW4.pdf
