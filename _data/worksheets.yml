@@ -1,0 +1,6 @@
+semester: Spring 2022
+home: assets/wksheets
+worksheets:
+- name: 21 January
+  blank: 21jan.pdf
+  #solutions: 21jan-solns.pdf
