@@ -1,0 +1,115 @@
+\documentclass[11pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-.9in} 
+\addtolength{\evensidemargin}{-.9in}
+\addtolength{\topmargin}{-.9in}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\textheight}{1.5in}
+
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage{verbatim} % for "comment" environment
+
+\usepackage{palatino}
+
+\usepackage[final]{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\usepackage{enumitem,xspace,fancyvrb}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\DefineVerbatimEnvironment{mVerb}{Verbatim}{numbersep=2mm,frame=lines,framerule=0.1mm,framesep=2mm,xleftmargin=4mm,fontsize=\footnotesize}
+
+% macros
+\usepackage{amssymb}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bJ}{\mathbf{J}}
+
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+
+\newcommand{\Null}{\operatorname{null}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+\newcommand{\trace}{\operatorname{tr}}
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1.}\quad }
+\newcommand{\exer}[2]{\prob{Exercise #2 on page #1}}
+
+\newcommand{\pts}[1]{(\emph{#1 pts}) }
+\newcommand{\epart}[1]{\bigskip\noindent\textbf{(#1)}\quad }
+\newcommand{\ppart}[1]{\,\textbf{(#1)}\quad }
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+
+
+\begin{document}
+\scriptsize \noindent Math 314 Linear Algebra (Bueler) \hfill 26 January 2022 \fbox{\emph{Not to be turned in!}}
+\normalsize\medskip
+
+\Large\centerline{\textbf{Worksheet: elimination, via row operations and matrices}}
+\medskip
+\normalsize
+
+\thispagestyle{empty}
+\begin{center}
+Do these calculations with a group, if possible.
+\end{center}
+
+\prob{A}  Consider this system of three equations in three unknowns:
+\begin{align*}
+         x_1 + x_2 + x_3 &= 4 \\
+      -8 x_1 + 4 x_2 \qquad &= -8 \\
+       5 x_1 + 7 x_2 - 4 x_3 &= -7
+\end{align*}
+Do elimination, as described in lecture and in section 2.2, followed by back-substitution, to solve this system.  Make sure to follow the standard ordering of operations, even when it is tempting to do some \emph{ad hoc} steps!  Show your work in a reasonable way; documenting each step here will help in problem \textbf{B} on the other side.  (\emph{Hint.  The entries of $\bx$ are small integers.})
+\vfill
+
+\clearpage \newpage
+\newcommand{\blankA}{\left[\begin{matrix} {\Huge \strut} \\ {\Huge \strut} \end{matrix} \phantom{lkdjfs adfk dsas dsff} \right]}
+\newcommand{\blankb}{\left[\begin{matrix} {\Huge \strut} \\ {\Huge \strut} \end{matrix} \phantom{lkdf ed} \right]}
+
+\prob{B}  Write the system in problem \textbf{A} (previous page) using matrices and vectors, as $A \bx = \bb$:
+   $$A = \blankA, \qquad \bb = \blankb$$
+Next, write down the three elimination matrices that correspond to the row operations you did.  That is, fill-in these $3\times 3$ matrices:
+   $$E_{21} = \blankA, \quad E_{31} = \blankA, \quad E_{32} = \blankA$$
+Finally, multiply-out matrices, as follows.  You should see that all the elimination steps on the previous page are reproduced here.
+\begin{align*}
+E_{21} A &= \blankA                   & E_{21} \bb &= \blankb \\
+E_{31} (E_{21} A) &= \blankA          & E_{31} (E_{21} \bb) &= \blankb \\
+E_{32} (E_{31} (E_{21} A)) &= \blankA & E_{32} (E_{31} (E_{21} \bb)) &= \blankb
+\end{align*}
+\vspace{1.0in}
+
+\prob{C} Thus elimination converts the linear system to an upper triangular system:
+    $$A\bx = \bb \qquad \longrightarrow \qquad U \bx = \bc$$
+What are $U$ and $\bc$?:
+   $$U = \blankA, \qquad \bc = \blankb$$
+Do back-substitution to (again) solve the system and find $\bx$.
+\vfill
+
+\end{document}
