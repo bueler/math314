@@ -1,0 +1,138 @@
+\documentclass[12pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-.65in} 
+\addtolength{\evensidemargin}{-.65in}
+\addtolength{\topmargin}{-.4in}
+\addtolength{\textwidth}{1.4in}
+\addtolength{\textheight}{0.8in}
+
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage{xspace,bm}
+\usepackage{verbatim,fancyvrb}
+\usepackage{palatino}
+\usepackage[final]{graphicx}
+\usepackage[pdftex,colorlinks=True]{hyperref}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\newcommand{\mfile}[1]{
+\begin{quote}
+\bigskip
+\VerbatimInput[frame=single,framesep=3mm,label=\fbox{\normalsize \textsl{\,#1\,}},fontfamily=courier,fontsize=\footnotesize]{../matlab/#1}
+\medskip
+\end{quote}
+}
+
+%\DefineVerbatimEnvironment{mVerb}{Verbatim}{numbersep=2mm,frame=lines,framerule=0.1mm,framesep=2mm,xleftmargin=4mm,fontsize=\footnotesize}
+\DefineVerbatimEnvironment{mVerb}{Verbatim}{numbersep=2mm,xleftmargin=4mm,fontsize=\footnotesize}
+
+% macros
+\usepackage{amssymb}
+
+\newcommand{\ba}{\bm{a}}
+\newcommand{\bb}{\bm{b}}
+\newcommand{\bc}{\bm{c}}
+\newcommand{\br}{\bm{r}}
+\newcommand{\bu}{\bm{u}}
+\newcommand{\bv}{\bm{v}}
+\newcommand{\bw}{\bm{w}}
+\newcommand{\bx}{\bm{x}}
+\newcommand{\by}{\bm{y}}
+\newcommand{\bz}{\bm{z}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+
+\newcommand{\image}{\operatorname{im}}
+\newcommand{\onull}{\operatorname{null}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+\newcommand{\trace}{\operatorname{tr}}
+
+\newcommand{\ds}{\displaystyle}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1}\quad }
+
+\newcommand{\probset}[2]{\prob{from Problem Set #1, pages #2:}}
+
+\newcommand{\pts}[1]{(\emph{#1 pts}) }
+\newcommand{\epart}[1]{\medskip\noindent\textbf{(#1)}\quad }
+\newcommand{\ppart}[1]{\,\textbf{(#1)}\quad }
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+
+
+\begin{document}
+\scriptsize \noindent Math 314 Linear Algebra (Bueler) \hfill Spring 2022
+\normalsize\medskip
+
+\Large
+\centerline{\textbf{Homework \#4}}
+
+\normalsize
+\bigskip
+\begin{quote}
+Due Monday 7 February, 2022 at 11:59pm.
+
+\medskip
+\noindent Submit as a single PDF via Gradescope, linked from the Canvas page
+
+\href{https://canvas.alaska.edu/courses/7017}{\texttt{canvas.alaska.edu/courses/7017}}
+
+\noindent Textbook Problems from Strang, \emph{Intro Linear Algebra}, 5th ed.~will be graded for completion.  Answers/solutions are linked at
+
+\href{https://bueler.github.io/math314/resources.html}{\texttt{bueler.github.io/math314/resources.html}}
+
+\noindent \textbf{P} Problems will be graded for correctness.
+\end{quote}
+\medskip
+
+\thispagestyle{empty}
+
+\noindent \hrulefill
+
+\noindent \emph{Put these Textbook Problems first on your PDF, in this order.}
+
+\probset{2.4}{77--82} \# 1, 2, 5, 15, 23, 32
+
+\probset{2.5}{92--96} \# 6, 11, 12, 16, 18, 25, 29, 34
+
+
+\bigskip
+\noindent \hrulefill
+
+\noindent \emph{Put these \textbf{P} Problems next on your PDF, in this order.}
+
+\prob{P17.}  Assume $A$ and $B$ are square matrices of the same size.  Which of the following matrices are guaranteed to equal $(A+B)^2$?
+    $$A^2 + B^2, \quad A^2 + 2 A B + B^2, \quad A(A+B) + B(A+B), \quad A^2 + AB + BA + B^2$$
+Explain why if so, and provide a counter-example if not.  (\emph{Hint: When not equal, either $1 \times 1$ or $2\times 2$ counterexamples will suffice.})
+
+\prob{P18.}  If $A$ is $m \times n$, how many multiplications are needed when
+
+\epart{a} $A$ multiplies a column vector $\bx$ of size $n$?
+
+\epart{b} $A$ multiplies an $n\times k$ matrix $B$?
+
+\epart{c} $A$ multiplies itself to produce $A^2$, in the case where $m=n$?
+
+\prob{P19.}  Use the Gauss-Jordan method to calculate $A^{-1}$ when
+    $$A = \begin{bmatrix} 2 & 1 & 0 \\ 1 & 2 & 1 \\ 0 & 1 & 2 \end{bmatrix}$$
+(\emph{That is, eliminate above and below the pivots as you convert $\big[A\,\,\, I\big]$ to $\big[I\,\,\, A^{-1}\big]$}, and show your steps.)  Check your result using Matlab's \texttt{inv()} command.
+
+\prob{P20.}  There are sixteen $2\times 2$ matrices whose entries are 0's and 1's only.  How many of the 16 are invertible?
+
+\end{document}

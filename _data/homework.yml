@@ -16,7 +16,7 @@ homework:
 - name: HW4
   due: 11:59pm on Mon Feb 7
   sections: 2.4, 2.5
-  #blank: HW4.pdf
+  blank: HW4.pdf
 - name: HW5
   due: 11:59pm on Fri Feb 11
   sections: 2.6, 2.7
