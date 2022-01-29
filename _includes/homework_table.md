@@ -2,7 +2,18 @@
 <table class="asst-table">
 {% for hw in data.homework %}
 <tr>
-	<td>{{ hw.name }}, due {{ hw.due }}:</td>
+	<td>
+		<table class="inner">
+		  <tr>
+        <td>{{ hw.name }}, due {{ hw.due }}</td>
+			</tr>
+		  {% if hw.sections %}
+			  <tr>
+ 		      <td>sections {{ hw.sections }}</td>
+				</tr>
+		  {% endif %}
+		</table>
+	</td>
 	<td>
 		<table class="inner">
 		  {% if hw.blank %}
