@@ -12,4 +12,3 @@ syllabus.pdf: syllabus.tex
 
 clean:
 	rm -f *.aux *.log *.out *.synctex.gz
-	rm -f schedule.pdf syllabus.pdf
