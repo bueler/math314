@@ -7,3 +7,6 @@ worksheets:
 - name: 28 January
   blank: 26jan.pdf
   solutions: 26jan-solns.pdf
+- name: 2 February
+  blank: 2feb.pdf
+  #solutions: 2feb-solns.pdf

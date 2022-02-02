@@ -1,0 +1,127 @@
+\documentclass[12pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-.9in} 
+\addtolength{\evensidemargin}{-.9in}
+\addtolength{\topmargin}{-.9in}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\textheight}{1.5in}
+
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage{verbatim} % for "comment" environment
+
+\usepackage{palatino}
+
+\usepackage[final]{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\usepackage{enumitem,xspace,fancyvrb}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\DefineVerbatimEnvironment{mVerb}{Verbatim}{numbersep=2mm,frame=lines,framerule=0.1mm,framesep=2mm,xleftmargin=4mm,fontsize=\footnotesize}
+
+% macros
+\usepackage{amssymb}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bJ}{\mathbf{J}}
+
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+
+\newcommand{\Null}{\operatorname{null}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+\newcommand{\trace}{\operatorname{tr}}
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1.}\quad }
+\newcommand{\exer}[2]{\prob{Exercise #2 on page #1}}
+
+\newcommand{\pts}[1]{(\emph{#1 pts}) }
+\newcommand{\epart}[1]{\bigskip\noindent\textbf{(#1)}\quad }
+\newcommand{\ppart}[1]{\,\textbf{(#1)}\quad }
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+
+
+\begin{document}
+\scriptsize \noindent Math 314 Linear Algebra (Bueler) \hfill 2 February 2022 \fbox{\emph{Not to be turned in!}}
+\normalsize\medskip
+
+\Large\centerline{\textbf{Worksheet: getting comfortable with matrix indexing}}
+\medskip
+\normalsize
+
+\thispagestyle{empty}
+\begin{center}
+All of these problems use ``$a_{ij}$'' for the entry in row $i$ and column $j$ of a matrix $A$. 
+
+Do these problems with a group, if possible!
+\end{center}
+
+\prob{I}  Write down \textbf{the} 3 by 3 matrix $A$ whose entries are given by
+
+\epart{a} $a_{ij} = \text{minimum of } i \text{ and } j$
+\vfill
+
+\epart{b} $a_{ij} = (-1)^{i+j}$
+\vfill
+
+\epart{c} $a_{ij} = i/j$
+\vfill
+
+\prob{II}  What words would you use to describe each of these classes of matrices?  Give \textbf{a} 3 by 3 example in each class.  Which matrix belongs to all four classes?
+
+\epart{a} $a_{ij} = 0 \text{ if } i \ne j$
+\vfill
+
+\epart{b} $a_{ij} = 0 \text{ if } i < j$
+\vfill
+
+\epart{c} $a_{ij} = a_{ji}$
+\vfill
+
+\epart{d} $a_{ij} = a_{1j}$
+\vfill
+
+\clearpage \newpage
+\prob{III}  Write a sum in terms of entries $a_{ij}$ and $b_{ij}$.  \textbf{Don't} look-up the formula!
+
+\epart{a} Suppose $A$ is $m \times n$ and $B$ is $n \times p$.  Let $C=AB$.  Write a formula for each entry of $C$:
+
+$$c_{ij} = \hspace{6.0in}$$
+\vfill
+
+\epart{b} Suppose $A$ is $m \times 1$ and $B$ is $1 \times p$, so $A$ is actually a column vector and $B$ is actually a row vector.  Again let $C=AB$, and write a formula for $c_{ij}$.  (This time it is very simple!  You are writing-out how the \emph{outer product} works.)
+
+$$c_{ij} = \hspace{6.0in}$$
+\vspace{1.0in}
+
+\noindent \hrule
+\bigskip
+\centerline{\footnotesize \textsc{blank space}}
+\vspace{4.0in}
+\end{document}
