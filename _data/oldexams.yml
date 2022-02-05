@@ -1,0 +1,30 @@
+exams:
+- name: Midterm Exam 1
+  files:
+    - semester: Fall 2014
+      home: assets/rhodes
+      blank: mid1-2014.pdf
+      solutions: mid1-2014-solns.pdf
+    - semester: Spring 2013
+      home: assets/rhodes
+      blank: mid1-2013.pdf
+      solutions: mid1-2013-solns.pdf
+- name: Midterm Exam 2
+  files:
+    - semester: Fall 2014
+      home: assets/rhodes
+      blank: mid2-2014.pdf
+      solutions: mid2-2014-solns.pdf
+    - semester: Spring 2013
+      home: assets/rhodes
+      blank: mid2-2013.pdf
+      solutions: mid2-2013-solns.pdf
+- name: Final Exam &nbsp; &nbsp; &nbsp; &nbsp;
+  files:
+    - semester: Fall 2014
+      home: assets/rhodes
+      blank: final-2014.pdf
+    - semester: Spring 2013
+      home: assets/rhodes
+      blank: final-2013.pdf
+      solutions: final-2013-solns.pdf
