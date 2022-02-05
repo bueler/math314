@@ -17,6 +17,8 @@ I hold [office hours](http://bueler.github.io/OffHrs.htm) in Chapman 306C.
 
 * Check out the weekly [Homework](homework.html) assignments.
 
+* There are [two Midterms and a Final](exams.html).  See the [Exams](exams.html) tab for the sections covered and old exams for review.
+
 * The [Canvas course page](https://canvas.alaska.edu/courses/7017) is important!  Go there for uploading Homework, finding solutions, and seeing your grades.
 
 * You will want to see the [Resources](resources.html) page.
