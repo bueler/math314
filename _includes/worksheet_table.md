@@ -5,12 +5,22 @@
 	<td>{{ ws.name }}</td>
 	<td>
 		<table class="inner">
+			{% if ws.blank %}
 		  <tr>
 			    <td><a href="{{ data.home }}/{{ ws.blank }}">blank</a></td>
 			</tr>
+			{% endif %}
 			{% if ws.solutions %}
 			<tr>
 			    <td><a href="{{ data.home }}/{{ ws.solutions }}">solutions</a></td>
+			</tr>
+			{% endif %}
+			{% if ws.file %}
+			<tr>
+			    <td><a href="{{ data.home }}/{{ ws.file }}">{{ ws.file }}</a></td>
+			</tr>
+			<tr>
+			    <td>({{ ws.description }})</td>
 			</tr>
 			{% endif %}
 		</table>

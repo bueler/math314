@@ -10,3 +10,6 @@ worksheets:
 - name: 2 February
   blank: 2feb.pdf
   solutions: 2feb-solns.pdf
+- name: 9 February
+  file: feb9class.m
+  description: Matlab demo
