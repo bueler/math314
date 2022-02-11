@@ -1,18 +1,18 @@
 semester: Spring 2022
 home: assets/wksheets
 worksheets:
-- name: 21 January
+- name: Fri 21 January
   blank: 21jan.pdf
   solutions: 21jan-solns.pdf
-- name: 28 January
+- name: Fri 28 January
   blank: 26jan.pdf
   solutions: 26jan-solns.pdf
-- name: 2 February
+- name: Wed 2 February
   blank: 2feb.pdf
   solutions: 2feb-solns.pdf
-- name: 9 February
+- name: Wed 9 February
   file: feb9class.m
   description: Matlab demo
-- name: 10 February
+- name: Fri 11 February
   blank: 10feb.pdf
   #solutions: 10feb-solns.pdf
