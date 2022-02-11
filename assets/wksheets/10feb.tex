@@ -1,0 +1,129 @@
+\documentclass[12pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-.9in} 
+\addtolength{\evensidemargin}{-.9in}
+\addtolength{\topmargin}{-.9in}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\textheight}{1.5in}
+
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage{verbatim} % for "comment" environment
+
+\usepackage{palatino}
+
+\usepackage[final]{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\usepackage{enumitem,xspace,fancyvrb}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\DefineVerbatimEnvironment{mVerb}{Verbatim}{numbersep=2mm,frame=lines,framerule=0.1mm,framesep=2mm,xleftmargin=4mm,fontsize=\footnotesize}
+
+% macros
+\usepackage{amssymb}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bJ}{\mathbf{J}}
+
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+
+\newcommand{\Null}{\operatorname{null}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+\newcommand{\trace}{\operatorname{tr}}
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1.}\, }
+
+\newcommand{\epart}[1]{\bigskip\noindent\textbf{(#1)}\, }
+\newcommand{\ppart}[1]{\,\textbf{(#1)}\, }
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+
+
+\begin{document}
+\scriptsize \noindent Math 314 Linear Algebra (Bueler) \hfill 10 February 2022 \fbox{\emph{Not to be turned in!}}
+\normalsize\medskip
+
+\Large\centerline{\textbf{Worksheet: From linear system to LU factorization}}
+\medskip
+\normalsize
+
+\thispagestyle{empty}
+\begin{center}
+Do these problems with a group, if possible!
+\end{center}
+
+\prob{I}  Consider the following linear system $A\bx = \bb$:
+\begin{align*}
+2 x_1 + x_2 - 9 x_3 &= -6 \\
+4 x_1 - 3 x_2 -21 x_3 &= -20 \\
+-6 x_1 - 13 x_2 + 24 x_3 &= 5
+\end{align*}
+\begin{comment}
+L =      1         0         0
+         2         1         0
+        -3         2         1
+U =      2         1        -9
+         0        -5        -3
+         0         0         3
+>> A = L*U
+A =      2         1        -9
+         4        -3       -21
+        -6       -13        24
+>> x = [1 1 1]';
+>> b = A*x
+b =     -6
+       -20
+         5
+\end{comment}
+Solve the linear system by \emph{elimination} and then \emph{back-substitution}.  Use the standard algorithm.  Show your work, and in particular show, as an intermediate stage, the triangular system which you get after elimination.
+\vfill
+
+\clearpage
+\newpage
+\prob{II}  \ppart{a}  From problem \textbf{I}, what elimination matrices $E_{21},E_{31}E_{32}$ did the row operations?
+\vfill
+
+\epart{b}  What are the inverses $L_{21}=E_{21}^{-1}$, $L_{31}=E_{31}^{-1}$, $L_{32}=E_{32}^{-1}$?
+\vfill
+
+\epart{c}  From problem \textbf{I}, what numbers were the pivots?  What is the determinant of A?
+\vfill
+
+\epart{d}  The computation in problem \textbf{I} can regarded as factoring $A=LU$.  What lower triangular matrix $L$ and upper triangular matrix $U$ were computed?
+\vfill
+
+\epart{e}  Multiply $LU$ and confirm you get the original matrix $A$.
+\vspace{0.5in}
+
+
+%\noindent \hrule
+%\bigskip
+%\centerline{\footnotesize \textsc{blank space}}
+%\vspace{4.0in}
+\end{document}

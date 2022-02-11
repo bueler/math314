@@ -13,3 +13,6 @@ worksheets:
 - name: 9 February
   file: feb9class.m
   description: Matlab demo
+- name: 10 February
+  blank: 10feb.pdf
+  #solutions: 10feb-solns.pdf
