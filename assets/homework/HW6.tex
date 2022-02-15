@@ -45,6 +45,8 @@
 \newcommand{\by}{\bm{y}}
 \newcommand{\bz}{\bm{z}}
 
+\newcommand{\bR}{\bm{R}}
+
 \newcommand{\CC}{\mathbb{C}}
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\ZZ}{\mathbb{Z}}
@@ -64,7 +66,7 @@
 
 \newcommand{\ds}{\displaystyle}
 
-\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1}\quad }
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1.}\quad }
 
 \newcommand{\probset}[2]{\prob{from Problem Set #1, pages #2:}}
 
@@ -97,7 +99,7 @@ Due Monday 21 February, 2022 at 11:59pm.
 
 \href{https://bueler.github.io/math314/resources.html}{\texttt{bueler.github.io/math314/resources.html}}
 
-\noindent \textbf{P} Problems will be graded for correctness.
+\noindent \textbf{P} Problems will be graded for correctness.  When grading these, I will expect you to write explanations using complete sentences!
 \end{quote}
 \medskip
 
@@ -107,9 +109,9 @@ Due Monday 21 February, 2022 at 11:59pm.
 
 \noindent \emph{Put these Textbook Problems first on your PDF, in this order.}
 
-\probset{3.1}{130--133} \# 4, 
+\probset{3.1}{130--133} \# 4, 5, 12, 14, 17, 20, 23, 27
 
-\probset{3.2}{x} \# ?
+\probset{3.2}{141--147} \# 1, 2, 7, 10, 15, 17, 22
 
 
 \bigskip
@@ -117,6 +119,82 @@ Due Monday 21 February, 2022 at 11:59pm.
 
 \noindent \emph{Put these \textbf{P} Problems next on your PDF, in this order.}
 
-\prob{P21.}  x
+\prob{P21}  If no zero pivots appear along the way, elimination can factor a symmetric matrix $S$ into $S=L D L^\top$ where $L$ is lower triangular, with ones on the diagonal as usual, and $D$ is a diagonal matrix.  The calculation proceeds essentially the same as an LU factorization, but once we see $U$ we can, because of symmetry, ``pull out'' the diagonal entries from $U$, and the remaining upper triangular matrix will be the transpose of the $L$ factor.  Specifically, the diagonal matrix $D$ is formed from the pivots.
+
+Do this factorization on the following matrices:
+    $$S = \begin{bmatrix} 1 & 3 \\ 3 & 2 \end{bmatrix}, \quad S = \begin{bmatrix} 2 & -1 & 0 & 0 \\ -1 & 2 & -1 & 0 \\ 0 & -1 & 2 & -1 \\ 0 & 0 & -1 & 2 \end{bmatrix}$$
+Check the factorization $S=L D L^\top$ by multiplying back!
+\begin{comment}
+>> S = [2 -1 0 0; -1 2 -1 0; 0 -1 2 -1; 0 0 -1 2];
+>> Z = S;
+>> Z(2,:) = Z(2,:) - (-1/2) * Z(1,:);
+>> Z(3,:) = Z(3,:) - (-1/(3/2)) * Z(2,:);
+>> Z(4,:) = Z(4,:) - (-1/(4/3)) * Z(3,:);
+>> U = Z
+U =
+   2.00000  -1.00000   0.00000   0.00000
+   0.00000   1.50000  -1.00000   0.00000
+   0.00000   0.00000   1.33333  -1.00000
+   0.00000   0.00000   0.00000   1.25000
+>> L = eye(4); L(2,1) = -1/2; L(3,2) = -2/3; L(4,3) = -3/4
+L =
+   1.00000   0.00000   0.00000   0.00000
+  -0.50000   1.00000   0.00000   0.00000
+   0.00000  -0.66667   1.00000   0.00000
+   0.00000   0.00000  -0.75000   1.00000
+>> D = diag(diag(U))
+D =
+   2.00000   0.00000   0.00000   0.00000
+   0.00000   1.50000   0.00000   0.00000
+   0.00000   0.00000   1.33333   0.00000
+   0.00000   0.00000   0.00000   1.25000
+>> norm(S - L*D*L')
+ans = 0
+\end{comment}
+
+
+\prob{P22}  \ppart{a}  How many entries of a symmetric $5\times 5$ matrix $S$ can be chosen independently?
+
+\epart{b}  Large, symmetric matrices, of size $m\times m$, require about half the storage (memory) on a computer as general matrices of the same size if the entries are saved in a careful scheme.  Explain.
+
+\epart{c}  A \emph{skew-symmetric} matrix $A$ is one for which $A^\top = -A$.  How many entries of a skew-symmetric $5\times 5$ matrix $A$ can be chosen independently?
+
+
+\prob{P23} \ppart{a}  Assume $A$ is $m\times n$.  Explain why the product $A^\top A$ is always defined; what size is it?  Then explain why
+    $$(A^\top A)_{ij} = \sum_{k=1}^m a_{ki}\, a_{kj}$$
+    % = \sum_{k=1}^m (A^\top)_{ik} a_{kj}
+(\emph{Hint.  Start from the general formula for $(AB)_{ij}$, but then specialize to the current case.})
+
+\epart{b}  Show that if $A$ is not a zero matrix then $A^\top A$ is also not a zero matrix.
+
+\epart{c}  Find a nonzero matrix $A$ so that $A^2=0$.  Then calculate $A^\top A$ and confirm it is \emph{not} zero.
+
+
+\prob{P24}  Which of the following subsets of $\bR^3$ are actually subspaces?  Explain.
+
+\epart{a}  The plane of vectors $(b_1,b_2,b_3)$ with $b_1=b_3$.
+
+\epart{b}  The plane of vectors with $b_1=1$.
+
+\epart{c}  The vectors with $b_1 b_2 b_3 = 0$.
+
+\epart{d}  All linear combinations of $\bv = (3,1,0)$ and $\bw = (2,2,2)$.
+
+\epart{e}  All vectors which satisfy $b_1+b_2+b_3=0$.
+
+\epart{f}  All vectors with $b_1 \ge b_2 \ge b_3$.
+
+
+\prob{P25}  In each part, describe the smallest subspace of the $2\times 2$ matrix space $M$ which contains the given matrices.  (\emph{Hint.  Answer by giving a parameterized general form for a matrix in the subspace.})
+
+\epart{a} $\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ and $\begin{bmatrix} 0 & 1 \\ 0 & 1 \end{bmatrix}$
+
+\epart{b} $\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ and $\begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}$
+
+
+\prob{P26}  Is it possible to construct a matrix $A$ whose column space contains $(1,1,0)$ and $(0,1,1)$, and whose nullspace contains $(1,0,1)$ and $(0,0,1)$.  Explain your answer.  (\emph{Hint.  What size is $A$?  How many pivots and how many free variables?})
+
+
+\prob{P27}  If $A$ is $4\times 4$ and invertible, describe the nullspace of the $4\times 8$ matrix $B=[A\,\,A]$.
 
 \end{document}
