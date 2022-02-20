@@ -22,6 +22,10 @@ homework:
   sections: 2.6, 2.7
   blank: HW5.pdf
 - name: HW6
-  due: 11:59pm on Fri Feb 25
+  due: 11:59pm on Mon Feb 28
   sections: 3.1, 3.2, bit of 2.7
   blank: HW6.pdf
+- name: HW7
+  due: 11:59pm on Mon Mar 14
+  sections: 3.3, 3.4
+  blank: HW7.pdf
