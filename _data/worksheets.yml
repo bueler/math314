@@ -19,3 +19,6 @@ worksheets:
 - name: Wed 16 February
   file: feb16class.m
   description: Matlab demo on resistor network
+- name: Mon 21 February
+  blank: 21feb.pdf
+  #solutions: 21feb-solns.pdf
