@@ -1,0 +1,119 @@
+\documentclass[12pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-.9in} 
+\addtolength{\evensidemargin}{-.9in}
+\addtolength{\topmargin}{-.9in}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\textheight}{1.5in}
+
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage{verbatim} % for "comment" environment
+
+\usepackage{palatino}
+
+\usepackage[final]{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\usepackage{enumitem,xspace,fancyvrb}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\DefineVerbatimEnvironment{mVerb}{Verbatim}{numbersep=2mm,frame=lines,framerule=0.1mm,framesep=2mm,xleftmargin=4mm,fontsize=\footnotesize}
+
+% macros
+\usepackage{amssymb}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bJ}{\mathbf{J}}
+
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bi}{\mathbf{i}}
+\newcommand{\bj}{\mathbf{j}}
+\newcommand{\bk}{\mathbf{k}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+
+\newcommand{\Null}{\operatorname{null}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+\newcommand{\trace}{\operatorname{tr}}
+
+\newcommand{\RR}{\mathbf{R}}
+
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1.}\quad }
+\newcommand{\exer}[2]{\prob{Exercise #2 on page #1}}
+
+\newcommand{\pts}[1]{(\emph{#1 pts}) }
+\newcommand{\epart}[1]{\bigskip\noindent\textbf{(#1)}\quad }
+\newcommand{\ppart}[1]{\,\textbf{(#1)}\quad }
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+
+
+\begin{document}
+\scriptsize \noindent Math 314 Linear Algebra (Bueler) \hfill 21 February 2022 \fbox{\emph{Not to be turned in!}}
+\normalsize\medskip
+
+\Large\centerline{\textbf{Worksheet: Is it a subspace?}}
+\medskip
+\normalsize
+
+\thispagestyle{empty}
+\begin{quote}
+A \emph{vector space} is a set of vectors with a defined addition operation and a scalar multiple operation.  (Various sensible rules apply to those operations; page 130.)  Then a \emph{subspace} is a subset $S$ of the vector space for which any linear combination of elements from $S$ is back in $S$.  You can check that $S$ is a subspace by verifying that $0$ is in $S$, that $\bv+\bw$ is in $S$ whenever $\bv$, $\bw$ are in $S$, and finally that $c\bv$ is in $S$ whenever $\bv$ is in $S$ and $c$ is any real number.
+
+For each problem below, say whether $S$ is a subspace or not.  If $S$ is a subspace provide a brief justification, while if $S$ is not a subspace describe an element that is not in $S$ but would be if $S$ were a subspace.
+\end{quote}
+
+\prob{1}  Vector space: $\RR^2$.  $S$ is the set of all points in the first quadrant of $\RR^2$.
+\vfill
+
+\prob{2}  Vector space: set of all real-valued functions on the line.  $S$ is the set of all polynomials.
+\vfill
+
+\prob{3}  Vector space: $\RR^3$.  $S$ is the set of all vectors $a\bi + b \bj + c\bk$ where $a,b,c$ are integers.
+\vfill
+
+\clearpage \newpage
+\prob{4}  Vector space: $\RR^2$.  $S$ is the set of all solutions to
+
+SKETCH for $A\bx=\bb$ with line of solns not through origin
+\vfill
+
+\prob{5}  Vector space: $\RR^2$.  $S$ is the set of all solutions to
+
+SKETCH for $A\bx=0$ for $A$ invertible
+\vfill
+
+\prob{6}  Vector space: $\RR^2$.  $S$ is the set of all solutions to 
+
+SKETCH for $A\bx=0$ for $A$ not invertible
+\vfill
+
+\prob{7}  Vector space: $\RR^3$.  $S$ is the set of all solutions to 
+
+$A\bx=0$ for $A$ of rank 2
+\vfill
+
+\end{document}
