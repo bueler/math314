@@ -21,4 +21,4 @@ worksheets:
   description: Matlab demo on resistor network
 - name: Mon 21 February
   blank: 21feb.pdf
-  #solutions: 21feb-solns.pdf
+  solutions: 21feb-solns.pdf
