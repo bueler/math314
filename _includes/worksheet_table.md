@@ -15,12 +15,12 @@
 			    <td><a href="{{ data.home }}/{{ ws.solutions }}">solutions</a></td>
 			</tr>
 			{% endif %}
-			{% if ws.file %}
+			{% if ws.mfile %}
 			<tr>
-			    <td><a href="{{ data.home }}/{{ ws.file }}">{{ ws.file }}</a></td>
+			    <td><a href="{{ data.home }}/{{ ws.mfile }}">{{ ws.mfile }}</a> (Matlab demo)</td>
 			</tr>
 			<tr>
-			    <td>({{ ws.description }})</td>
+			    <td>{{ ws.description }}</td>
 			</tr>
 			{% endif %}
 		</table>
