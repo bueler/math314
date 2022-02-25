@@ -19,6 +19,8 @@
 			<tr>
 			    <td><a href="{{ data.home }}/{{ ws.mfile }}">{{ ws.mfile }}</a> (Matlab demo)</td>
 			</tr>
+			{% endif %}
+			{% if ws.description %}
 			<tr>
 			    <td>{{ ws.description }}</td>
 			</tr>
