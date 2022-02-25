@@ -22,3 +22,6 @@ worksheets:
 - name: Mon 21 February
   blank: 21feb.pdf
   solutions: 21feb-solns.pdf
+- name: Fri 25 February
+  blank: elim-big-picture.pdf
+  description: Elimination: The Big Picture
