@@ -2,26 +2,35 @@ semester: Spring 2022
 home: assets/wksheets
 worksheets:
 - name: Fri 21 January
+  description: 2 views of systems
   blank: 21jan.pdf
   solutions: 21jan-solns.pdf
 - name: Fri 28 January
+  description: elimination with matrices
   blank: 26jan.pdf
   solutions: 26jan-solns.pdf
 - name: Wed 2 February
+  description: matrix indexing practice
   blank: 2feb.pdf
   solutions: 2feb-solns.pdf
 - name: Wed 9 February
-  mfile: feb9class.m
   description: LU factorization
+  mfile: feb9class.m
 - name: Fri 11 February
+  description: LU factorization practice
   blank: 10feb.pdf
   solutions: 10feb-solns.pdf
 - name: Wed 16 February
-  mfile: feb16class.m
   description: resistor network
+  mfile: feb16class.m
 - name: Mon 21 February
+  description: is it a subspace?
   blank: 21feb.pdf
   solutions: 21feb-solns.pdf
 - name: Fri 25 February
   blank: elim-big-picture.pdf
   description: The Big Picture handout
+- name: Mon 28 February
+  blank: 21feb.pdf
+  #solutions: 21feb-solns.pdf
+  description: interpreting RREF
