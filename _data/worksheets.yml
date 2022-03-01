@@ -31,6 +31,6 @@ worksheets:
   blank: elim-big-picture.pdf
   description: The Big Picture handout
 - name: Mon 28 February
-  blank: 21feb.pdf
-  #solutions: 21feb-solns.pdf
+  blank: 28feb.pdf
+  #solutions: 28feb-solns.pdf
   description: interpreting RREF
