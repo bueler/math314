@@ -149,25 +149,25 @@ Find a basis for each of the four subspaces associated to $A$:
 
 \epart{b} Find a matrix $B$ that has $\bV$ as its null space.
 
-\epart{c} Multiply $AB$.  Explain this result.
+\epart{c} Multiply $AB^\top$.  Multiply $BA^\top$.  Why do these come out so simple?
 
 
 \prob{P39}  Let $I$ be the $3\times 3$ identity matrix and $O$ be the $3\times 2$ zero matrix.  For each of these matrices, find the dimensions of the four subspaces:
     $$A = \begin{bmatrix} 0 \end{bmatrix}, \quad B = \begin{bmatrix} I & 0 \end{bmatrix}, \quad C = \begin{bmatrix} I & I \\ \,0^\top & 0^\top \end{bmatrix}$$
 
 
-\prob{P41} \ppart{a}  Prove that every $\bx$ in $N(A)$ is perpendicular to every $A^\top \by$ in the row space of $A$ (i.e.~in $C(A^\top)$).  \emph{Hint. Start with $A \bx = \bzero$.  Now compute a dot product.}
+\prob{P40} \ppart{a}  Prove that every $\bx$ in $N(A)$ is perpendicular to every $A^\top \by$ in the row space of $A$ (i.e.~in $C(A^\top)$).  \emph{Hint. Start with $A \bx = \bzero$.  Now compute a dot product.}
 
 \epart{b}  Prove that every $\by$ in $N(A^\top)$ is perpendicular to every $A \bx$ in the column space of $A$ (i.e.~in $C(A)$).
 
 
-\prob{P40}  This system of equations $A\bx = \bb$ has no solutions:
+\prob{P41}  This system of equations $A\bx = \bb$ has no solutions:
 \begin{align*}
 2 x + 3 y + 4 z &= 9 \\
 4 x + 3 y + 2 z &= 9 \\
 2 x \phantom{+sxx} - 2 z &= 1
 \end{align*}
-Find numbers $c_1,c_2,c_3$ to multiply the equations so that they add to $0=1$.  You have found a vector $\by$ in which subspace?  Check its dot product: $\by^\top \bb = 1$.
+Find numbers $c_1,c_2,c_3$ to multiply the equations so that they add to $0=1$.  (\emph{Hint.  Do row operations, and keep track of them.})  You have found a vector $\by$ in which subspace?  Check its dot product: $\by^\top \bb = 1$.
 
 
 \prob{P42}  Suppose $\bS$ is spanned by the vectors $(1,2,2,3)$ and $(1,1,1,1)$.  Find two vectors that span $\bS^\top$.  This is the same as solving $A\bx = \bzero$ for which $A$?
