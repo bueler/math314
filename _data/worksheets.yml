@@ -29,8 +29,12 @@ worksheets:
   solutions: 21feb-solns.pdf
 - name: Fri 25 February
   blank: elim-big-picture.pdf
-  description: The Big Picture handout
+  description: The Elimination Big Picture handout
 - name: Mon 28 February
   blank: 28feb.pdf
-  #solutions: 28feb-solns.pdf
+  solutions: 28feb-solns.pdf
   description: interpreting RREF
+- name: Wed 16 March
+  blank: 16mar.pdf
+  #solutions: 16mar-solns.pdf
+  description: the 4 subspaces
