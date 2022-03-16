@@ -36,5 +36,5 @@ worksheets:
   description: interpreting RREF
 - name: Wed 16 March
   blank: 16mar.pdf
-  #solutions: 16mar-solns.pdf
+  solutions: 16mar-solns.pdf
   description: the 4 subspaces
