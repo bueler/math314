@@ -38,7 +38,7 @@ worksheets:
   blank: 16mar.pdf
   solutions: 16mar-solns.pdf
   description: the 4 subspaces
-- name: Mon 21 March
+- name: Wed 23 March
   blank: 21mar.pdf
   description: 4 curve-fitting examples
   mfile: mar21.m
