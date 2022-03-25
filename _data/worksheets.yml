@@ -42,3 +42,6 @@ worksheets:
   blank: 21mar.pdf
   description: 4 curve-fitting examples
   mfile: mar21.m
+- name: Fri 25 March
+  description: normal equations demo
+  mfile: mar25.m
