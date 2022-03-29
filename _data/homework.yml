@@ -41,3 +41,7 @@ homework:
   due: 11:59pm on Mon Apr 4
   sections: 5.1, 5.2
   blank: HW10.pdf
+- name: HW11
+  due: 11:59pm on Mon Apr 11
+  sections: 6.1, 6.2
+  #blank: HW11.pdf
