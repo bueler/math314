@@ -1,0 +1,205 @@
+\documentclass[11pt]{amsart}
+%\pagestyle{empty} 
+\setlength{\topmargin}{-0.5in} % usually -0.25in
+\addtolength{\textheight}{1.2in} % usually 1.25in
+\addtolength{\oddsidemargin}{-0.95in}
+\addtolength{\evensidemargin}{-0.95in}
+\addtolength{\textwidth}{1.9in} %\setlength{\parindent}{0pt}
+
+\newcommand{\normalspacing}{\renewcommand{\baselinestretch}{1.1}\tiny\normalsize}
+\normalspacing
+
+% macros
+\usepackage{amssymb,xspace,alltt,verbatim}
+\usepackage[final]{graphicx}
+\usepackage[pdftex,colorlinks=true]{hyperref}
+\usepackage{fancyvrb}
+\usepackage{tikz}
+
+\newtheorem*{lem*}{Lemma}
+
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bd}{\mathbf{d}}
+\newcommand{\bs}{\mathbf{s}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+
+\newcommand{\bbf}{\mathbf{f}}
+
+\newcommand{\CC}{{\mathbb{C}}}
+\newcommand{\RR}{{\mathbb{R}}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\ZZ}{{\mathbb{Z}}}
+\newcommand{\ZZn}{{\mathbb{Z}}_n}
+\newcommand{\NN}{{\mathbb{N}}}
+\newcommand{\ip}[2]{\mathrm{\left<#1,#2\right>}}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\newcommand{\Log}{\operatorname{Log}}
+
+\newcommand{\Span}{\operatorname{span}}
+
+\newcommand{\grad}{\nabla}
+
+\newcommand{\ds}{\displaystyle}
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+\newcommand{\pylab}{\textsc{pylab}\xspace}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1.} }
+\newcommand{\pts}[1]{(\emph{#1 pts})}
+
+\newcommand{\probpts}[2]{\prob{#1} \pts{#2} \quad}
+\newcommand{\ppartpts}[2]{\textbf{(#1)} \pts{#2} \quad}
+\newcommand{\epartpts}[2]{\medskip\noindent \textbf{(#1)} \pts{#2} \quad}
+
+\newcommand{\mybox}{\boxed{\phantom{\begin{bmatrix} I & I \\ O & O \end{bmatrix} fj ladsfj}}}
+\newcommand{\dbox}{\boxed{\phantom{\begin{bmatrix} I & I \\ O & O \end{bmatrix}}}}
+
+
+\begin{document}
+\hfill \Large Name:\underline{\phantom{Ed Bueler really really long long long name}}
+\medskip
+
+\scriptsize \noindent Math 314 Linear Algebra (Bueler) \hfill Monday, 28 March 2022
+\medskip
+
+\LARGE\centerline{\textbf{Midterm Exam 2}}
+
+\smallskip
+\begin{quote}
+\large
+\textbf{No book, notes, electronics, calculator, or internet access.  100 points possible. 65 minutes maximum.}
+\end{quote}
+
+\normalsize
+\medskip
+
+\thispagestyle{empty}
+
+\prob{1}  Here is a matrix and its row-reduced echelon form:
+
+% R = [1 2 0 -1 1; 0 0 1 0 1; 0 0 0 0 0]
+% C = reshape(-2:6,3,3)
+% A = C*R
+% A =
+%        -2        -4         1         2        -1
+%        -1        -2         2         1         1
+%         0         0         3         0         3
+
+    $$A = \begin{bmatrix} -2 & -4 & 1 & 2 & -1 \\ -1 & -2 & 2 & 1 & -1 \\ 0 & 0 & 3 & 0 & 3 \end{bmatrix}
+      \qquad \to \qquad
+      R = \begin{bmatrix} 1 & 2 & 0 & -1 & 1 \\ 0 & 0 & 1 & 0 & 1 \\ 0 & 0 & 0 & 0 & 0 \end{bmatrix}$$
+
+\epartpts{a}{5}  What is the \textbf{dimension} of the row space $C(A^\top)$?  \textbf{Provide a basis} for $C(A^\top)$.  (\emph{Suggestion:}  Write your basis as $C(A^\top)=\Span\{\dots\}$ with particular vectors.)
+
+\medskip
+\noindent $\dim C(A^\top) = $ \dbox
+\vfill
+
+\epartpts{b}{5}  What is the \textbf{dimension} of the column space $C(A)$?  \textbf{Provide a basis}.
+
+\medskip
+\noindent $\dim C(A) = $ \dbox
+\vfill
+
+\epartpts{c}{5}  What is the \textbf{dimension} of the null space $N(A)$?  \textbf{Provide a basis}.
+
+\medskip
+\noindent $\dim N(A) = $ \dbox
+\vfill
+
+
+\clearpage
+\newpage
+\probpts{2}{10}  Suppose $A$ is an $m$ by $n$ matrix.  Show that the null space $N(A)$ and the row space $C(A^\top)$ are orthogonal, as subspaces of the vector space $\RR^n$.  (\emph{Hint.} What is a good way to write a generic vector from $C(A^\top)$?)
+\vfill
+
+\probpts{3}{6}  Suppose $A$ is an $m$ by $n$ matrix.  Show that $A^\top A$ is symmetric.
+\vspace{3.0in}
+
+
+\clearpage
+\newpage
+\prob{4}  Consider the overdetermined linear system ``$A\bv = \bb$'' with
+    $$A = \begin{bmatrix} 1 & 1 \\ 0 & 2 \\ 1 & 2 \\ -1 & 1 \end{bmatrix}, \qquad \bb = \begin{bmatrix} 0 \\ 10 \\ -1 \\ -6 \end{bmatrix}.$$
+
+\epartpts{a}{10}  Write down the normal equations for this system.
+\vfill
+
+\epartpts{b}{6}  The solution of the normal equations is $\bv = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$.  Is $\bb$ in the column space $C(A)$ for this system?  How do you know?
+\vspace{1.5in}
+
+
+\clearpage
+\newpage
+\probpts{5}{10}  Consider this linear system $A\bx=\bb$:
+\begin{align*}
+x_1 + 2 x_2 + 2 x_3 + x_4 &= 9 \\
+3 x_1 + 6 x_2 + 4 x_3 + x_4 &= 17
+\end{align*}
+Here is the row-reduced echelon form of the augmented matrix:
+    $$[A\,\,\,\bb] \qquad \to \qquad
+    [R\,\,\,\bd] = \begin{bmatrix} 1 & 2 & 0 & -1 & -1 \\ 0 & 0 & 1 & 1 & 5 \end{bmatrix}$$
+What is the general solution of the system?  Show your work.
+\vfill
+
+\probpts{6}{6}  Show that if $A$ is any matrix and $\bx$ is in $N(A)$ then $\bx$ is in $N(A^\top A)$.
+\vspace{2.5in}
+
+
+\clearpage
+\newpage
+\probpts{7}{8}  $M_3$ is the vector space of all $3$ by $3$ matrices.  Give a basis for the subspace $S$ of symmetric matrices.
+\vfill
+
+\probpts{8}{6}  Suppose $A$ is any $m$ by $n$ matrix with full rank.  Let $P=A(A^\top A)^{-1} A^\top$, the projection onto $C(A)$.  Show that $P^2=P$.
+\vfill
+
+\probpts{9}{8}  Suppose $I$ is the $3$ by $3$ identity matrix and $O$ is the $2$ by $3$ zero matrix.  Consider the matrix
+    $$A = \begin{bmatrix} I & I \\ O & O \end{bmatrix},$$
+which is $5$ by $6$.  What are the dimensions of the four subspaces?
+\begin{align*}
+\dim C(A^\top) &= \mybox & \dim C(A) &= \mybox \\
+\dim N(A) &= \mybox & \dim N(A^\top) &= \mybox
+\end{align*}
+\bigskip
+
+
+\clearpage
+\newpage
+\prob{10}  Consider the line through the origin in $\RR^2$ along the vector $\ds \ba = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$.  Suppose $\bb = \begin{bmatrix} -1 \\ 2 \end{bmatrix}$.
+
+\medskip
+\epartpts{a}{5}  Sketch $\ba$, the line along $\ba$, and the vector $\bb$, all on the same axes.  (\emph{Try to make your sketch to scale!})  Add $P\bb = \hat x \ba$, the projection of $\bb$ onto the line.
+\vspace{4.0in}
+
+\epartpts{b}{5}  Compute $\hat x$ and $P\bb = \hat x \ba$.
+\vfill
+
+\epartpts{c}{5}  Compute the projection matrix $P$.
+\vfill
+
+
+\clearpage
+\newpage
+\probpts{Extra Credit}{3}  The complete solution to $A\bx = \begin{bmatrix} 1 \\ 3 \end{bmatrix}$ is $\bx = \begin{bmatrix} 1 \\ 0 \end{bmatrix} + c \begin{bmatrix} 0 \\ 1 \end{bmatrix}$.  Find $A$.  Show your work.
+% #33 in section 3.3
+\vfill
+
+\noindent \hrulefill
+\begin{center}
+\small
+\textsc{blank space}
+\end{center}
+\vfill
+
+\end{document}
