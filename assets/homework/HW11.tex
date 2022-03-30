@@ -124,18 +124,35 @@
 
 \noindent \emph{Put these \textbf{P} Problems next on your PDF, in this order.}
 
-\prob{P52}  6.1 like 2 and 3
+\prob{P52}  \ppart{a}  Compute the eigenvalues and eigenvectors of $\ds A = \begin{bmatrix} 0 & 2 \\ 1 & 1 \end{bmatrix}$.
 
-\prob{P53}  like 7
+\epart{b}  Find the eigenvalues and eigenvectors of the matrices the matrices $A+I$ and $A^{-1}$.  Confirm that the eigenvectors are the same as those for $A$.
 
-\prob{P54}  like 29
+\epart{c}  Apply the functions $f(x) = x+1$ and $g(x) = 1/x$ to the eigenvalues of $A$, and confirm this gives the same eigenvalues computed in \textbf{(b)}.
 
-\prob{P55}  like 37
+\medskip
+\noindent \emph{This illustrates a more general rule, that functions of a matrix, like $f(A)=A+I$ and $g(A)=A^{-1}$, have eigenvalues which are computed by the same function, but on complex numbers.}
 
-\prob{P56}  6.2 like 5
+
+\prob{P53}  \ppart{a}  Compute the eigenvalues of the matrices
+    $$A = \begin{bmatrix} 0 & 0 & 1 \\ 0 & 2 & 0 \\ 3 & 0 & 0 \end{bmatrix}, \qquad B = \begin{bmatrix} 2 & 2 & 2 \\ 2 & 2 & 2 \\ 2 & 2 & 2 \end{bmatrix}.$$
+
+\epart{b}  The matrix $B$ is rank one.  To consider this case, suppose $\bu,\bv$ are nonzero (column) vectors in $\RR^n$.  Let $C = \bu \bv^\top$; this is the general formula for a rank one matrices.  Show that $C \bu = \lambda \bu$ and find $\lambda$.  Also show that if $\bw$ is any vector orthogonal to $\bv$ then $C \bw = \bzero$.  What can you conclude about the eigenvalues of rank one matrices.
 
 
-\prob{P57}  The following four diagonalizable $2\times 2$ matrices look rather similar to each other, for instance in terms of the sizes of the entries:
+\prob{P54}  $2$ by $2$ rotation matrices have the form
+    $$A = \begin{bmatrix} \cos \theta & - \sin \theta \\ \sin \theta & \cos \theta \end{bmatrix}$$
+Using this form, find a non-identity matrix $A$ with the property that $A^3=I$.  Now compute the eigenvalues of $A$, and confirm that the eigenvalues are certain complex numbers $\lambda$, on the unit circle, which satisfy $\lambda^3=1$.
+
+
+\prob{P55}  Answer true or false; if true give an explanation and if false give a counterexample.  Assume $A$ is $3$ by $3$.
+
+\epart{a}  If the eigenvalues of $A$ are $2,2,5$ then $A$ is invertible.
+
+\epart{b}  If the eigenvalues of $A$ are $2,2,5$ then $A$ is diagonalizable.
+
+
+\prob{P56}  The following four diagonalizable $2\times 2$ matrices look rather similar to each other, for instance in terms of the sizes of the entries:
     $$A = \begin{bmatrix} 3 & 2 \\ 1 & 4 \end{bmatrix}, \qquad B = \begin{bmatrix} 3 & 2 \\ -5 & -3 \end{bmatrix}, \qquad C = \begin{bmatrix} 5 & 7 \\ -3 & -4 \end{bmatrix}, \qquad D = \begin{bmatrix} 5 & 6.9 \\ -3 & -4 \end{bmatrix}$$
 However, their \emph{powers} act in completely different ways.  Looking at the eigenvalues will explain it.
 
