@@ -124,18 +124,35 @@
 
 \noindent \emph{Put these \textbf{P} Problems next on your PDF, in this order.}
 
-\prob{P52}  
+\prob{P52}  6.1 like 2 and 3
 
-6.1 like 2 and 3
+\prob{P53}  like 7
 
-like 7
+\prob{P54}  like 29
 
-like 29
+\prob{P55}  like 37
 
-like 37
+\prob{P56}  6.2 like 5
 
-6.2 like 5
 
-like 33
+\prob{P57}  The following four diagonalizable $2\times 2$ matrices look rather similar to each other, for instance in terms of the sizes of the entries:
+    $$A = \begin{bmatrix} 3 & 2 \\ 1 & 4 \end{bmatrix}, \qquad B = \begin{bmatrix} 3 & 2 \\ -5 & -3 \end{bmatrix}, \qquad C = \begin{bmatrix} 5 & 7 \\ -3 & -4 \end{bmatrix}, \qquad D = \begin{bmatrix} 5 & 6.9 \\ -3 & -4 \end{bmatrix}$$
+However, their \emph{powers} act in completely different ways.  Looking at the eigenvalues will explain it.
 
+\epart{a}  Compute the eigenvalues of the 4 matrices and put all 8 values on a single graph in the complex plane.  (\emph{The eigenvalues of real matrices are generally complex!})  Show the unit circle on your graph, and then show the eigenvalues as 8 clearly-labeled dots in the complex plane; consider using a color for each matrix.  Draw the picture well enough so that you can tell where all the eigenvalues are relative to the unit circle.
+% see teaching/M314S22/solns/figs/fourmats.m
+
+\epart{b}  Recall that if $M$ is a square and diagonalizable matrix with eigenvalues $\lambda_i$ and eigenvectors $\bx_i$, so that $M=X \Lambda X^{-1}$ is the diagonalization, then
+    $$M^{k} = X \Lambda^{k} X^{-1}.$$
+(\emph{Remember the calculation:} $M^2 = X \Lambda X^{-1} X \Lambda X^{-1} = X \Lambda^2 X^{-1}$.)  That is, powers of a diagonalized matrix can be computed simply by exponentiating the diagonal matrix of eigenvalues $\Lambda$.  Based on where the eigenvalues in part \textbf{(a)} are, relative to the unit circle, match $A,B,C,D$ to these descriptions:
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\begin{enumerate}
+\item $M^{100}=I$
+\item $M^{100}=-M$
+\item $M^{100}$ has tiny entries
+\item $M^{100}$ has enormous entries
+\end{enumerate}
+(\emph{Hint.} A power of a complex number which is on the unit circle just rotates around the circle.  In general, $(r e^{i\theta})^k = r^k e^{ik\theta}$.)
+
+\epart{c}  Use Matlab to compute the 100th power of the 4 matrices to confirm your results.
 \end{document}
