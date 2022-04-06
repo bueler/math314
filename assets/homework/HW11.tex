@@ -161,7 +161,9 @@ However, their \emph{powers} act in completely different ways.  Looking at the e
 
 \epart{b}  Recall that if $M$ is a square and diagonalizable matrix with eigenvalues $\lambda_i$ and eigenvectors $\bx_i$, so that $M=X \Lambda X^{-1}$ is the diagonalization, then
     $$M^{k} = X \Lambda^{k} X^{-1}.$$
-(\emph{Remember the calculation:} $M^2 = X \Lambda X^{-1} X \Lambda X^{-1} = X \Lambda^2 X^{-1}$.)  That is, powers of a diagonalized matrix can be computed simply by exponentiating the diagonal matrix of eigenvalues $\Lambda$.  Based on where the eigenvalues in part \textbf{(a)} are, relative to the unit circle, match $A,B,C,D$ to these descriptions:
+(\emph{Remember the calculation:} $M^2 = X \Lambda X^{-1} X \Lambda X^{-1} = X \Lambda^2 X^{-1}$.)  That is, powers of $A$ can be computed by putting the power on the diagonal matrix $\Lambda$.
+
+Based on where the eigenvalues in part \textbf{(a)} are, relative to the unit circle, match $A,B,C,D$ to these descriptions:
 \renewcommand{\labelenumi}{\arabic{enumi}.}
 \begin{enumerate}
 \item $M^{100}=I$
@@ -169,7 +171,7 @@ However, their \emph{powers} act in completely different ways.  Looking at the e
 \item $M^{100}$ has tiny entries
 \item $M^{100}$ has enormous entries
 \end{enumerate}
-(\emph{Hint.} A power of a complex number which is on the unit circle just rotates around the circle.  In general, $(r e^{i\theta})^k = r^k e^{ik\theta}$.)
+(\emph{Hint.} A power of a complex number $x+iy = r e^{i\theta}$ which is on the unit circle just rotates around the circle.  In general, $(r e^{i\theta})^k = r^k e^{ik\theta}$.)
 
 \epart{c}  Use Matlab to compute the 100th power of the 4 matrices to confirm your results.
 \end{document}
