@@ -14,6 +14,6 @@ exams:
   blank: mid2.pdf
   solutions: mid2-solns.pdf
 - name: Final Exam
-  date: Wednesday 4/27 8-10 am
+  date: Friday 4/29 8-10 am <-- CORRECTED
   sections: all previous, 5.1, 5.2, 6.1, 6.2,
   cont: 6.4, 8.1, 8.2
