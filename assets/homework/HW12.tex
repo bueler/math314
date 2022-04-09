@@ -1,0 +1,196 @@
+\documentclass[12pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-.65in}
+\addtolength{\evensidemargin}{-.65in}
+\addtolength{\topmargin}{-.4in}
+\addtolength{\textwidth}{1.4in}
+\addtolength{\textheight}{0.8in}
+
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage{xspace,bm}
+\usepackage{verbatim,fancyvrb}
+\usepackage{palatino}
+\usepackage[final]{graphicx}
+\usepackage[pdftex,colorlinks=True]{hyperref}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\newcommand{\mfile}[1]{
+\begin{quote}
+\bigskip
+\VerbatimInput[frame=single,framesep=3mm,label=\fbox{\normalsize \textsl{\,#1\,}},fontfamily=courier,fontsize=\footnotesize]{../matlab/#1}
+\medskip
+\end{quote}
+}
+
+%\DefineVerbatimEnvironment{mVerb}{Verbatim}{numbersep=2mm,frame=lines,framerule=0.1mm,framesep=2mm,xleftmargin=4mm,fontsize=\footnotesize}
+\DefineVerbatimEnvironment{mVerb}{Verbatim}{numbersep=2mm,xleftmargin=4mm,fontsize=\footnotesize}
+
+% macros
+\usepackage{amssymb}
+
+\newcommand{\ba}{\bm{a}}
+\newcommand{\bb}{\bm{b}}
+\newcommand{\bc}{\bm{c}}
+\newcommand{\bp}{\bm{p}}
+\newcommand{\br}{\bm{r}}
+\newcommand{\bu}{\bm{u}}
+\newcommand{\bv}{\bm{v}}
+\newcommand{\bw}{\bm{w}}
+\newcommand{\bx}{\bm{x}}
+\newcommand{\by}{\bm{y}}
+\newcommand{\bz}{\bm{z}}
+
+\newcommand{\bM}{\bm{M}}
+\newcommand{\bR}{\bm{R}}
+\newcommand{\bS}{\bm{S}}
+\newcommand{\bV}{\bm{V}}
+\newcommand{\bW}{\bm{W}}
+
+\newcommand{\bzero}{\bm{0}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+
+\newcommand{\image}{\operatorname{im}}
+\newcommand{\onull}{\operatorname{null}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+\newcommand{\trace}{\operatorname{tr}}
+
+\newcommand{\ds}{\displaystyle}
+
+\newcommand{\prob}[1]{\bigskip\noindent{\large \textbf{#1.}}\quad }
+\newcommand{\probset}[2]{\bigskip\noindent\textbf{from Problem Set #1, pages #2:}\quad }
+
+\newcommand{\pts}[1]{(\emph{#1 pts}) }
+\newcommand{\epart}[1]{\medskip\noindent\textbf{(#1)}\quad }
+\newcommand{\ppart}[1]{\,\textbf{(#1)}\quad }
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+
+
+\begin{document}
+\scriptsize \noindent Math 314 Linear Algebra (Bueler) \hfill 11 April 2022
+\normalsize\medskip
+
+\Large
+\centerline{\textbf{Homework \#12}}
+
+\bigskip
+\large
+\centerline{Due Monday 25 April, 2022 at 11:59pm.}
+
+\normalsize
+\bigskip
+\begin{quote}
+\medskip
+\noindent Submit as a single PDF via Gradescope; see the Canvas page
+
+\href{https://canvas.alaska.edu/courses/7017}{\texttt{canvas.alaska.edu/courses/7017}}
+
+\noindent Textbook Problems from Strang, \emph{Intro Linear Algebra}, 5th ed.~will be graded for completion.  Answers/solutions to these Problems are linked at
+
+\href{https://bueler.github.io/math314/resources.html}{\texttt{bueler.github.io/math314/resources.html}}
+
+\noindent The \textbf{P} Problems will be graded for correctness.  When grading these Problems, I will expect you to write explanations using complete sentences!
+\end{quote}
+\medskip
+
+\thispagestyle{empty}
+
+\noindent \hrulefill
+
+\noindent \emph{Put these Textbook Problems first on your PDF, in this order.}
+
+\probset{6.4}{344--348} \# 4, 5, 8
+
+\probset{8.1}{406--409} \# 1, 3, 13, 17, 20, 24 (\emph{Hint. Append columns.})
+
+\probset{8.2}{417--419} \# 1, 4, 5, 10, 11, 14, 27
+
+\bigskip
+\noindent \hrulefill
+
+\noindent \emph{Put these \textbf{P} Problems next on your PDF, in this order.}
+
+\prob{P57}  \ppart{a} By hand calculation, find an orthogonal matrix $Q$ which diagonalizes
+    $$S = \begin{bmatrix} 1 & 0 & 2 \\ 0 & -1 & -2 \\ 2 & -2 & 0 \end{bmatrix}$$
+
+\epart{b} Check your calculation using Matlab's \texttt{eig} command
+
+\texttt{[Q,D] = eig(S)}
+
+\noindent Explain any differences between your $Q$ and the computed \texttt{Q} from Matlab.
+
+\medskip
+\noindent (\emph{Hints.  Recall that if $X$ is an invertible matrix of eigenvectors of $A$ then $X$ diagonalizes $A$ in the sense that $AX=X\Lambda$ or $A=X \Lambda X^{-1}$, where $\Lambda$ is diagonal.  Recall that the columns of an orthogonal matrix are orthonormal vectors: $Q^\top Q=I$.  If $X=Q$ is orthogonal then $A=X \Lambda X^{-1}=Q \Lambda Q^\top$.})
+
+
+\prob{P58}  \ppart{a} What matrix $A$ transforms $(1,0)$ and $(0,1)$ to $(r,s)$ and $(t,u)$?
+
+\epart{b} What matrix $B$ transforms $(a,b)$ and $(c,d)$ to $(1,0)$ and $(0,1)$?
+
+\epart{c} What condition on $a,b,c,d$ will make part \textbf{(b)} impossible?
+
+\epart{d} When $r=a$, $s=b$, $t=c$, and $u=d$ then $A$ and $B$ are matrix inverses.  Confirm this.
+
+
+\clearpage\newpage
+\prob{P59}  Consider the symmetric matrices
+    $$A = \begin{bmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{bmatrix}, \qquad B = \frac{1}{3} \begin{bmatrix} 1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1 \end{bmatrix}$$
+
+\epart{a}  Which of these classes of matrices do $A$ and $B$ belong to?:
+\begin{quote}
+{\small
+\textsc{invertible, \, orthogonal, \, projection, \, permutation, \, diagonalizable}
+}
+\end{quote}
+Explain, or show work which supports your answers.
+
+\epart{b}  Which of these factorizations are possible for $A$ and $B$?:
+\begin{quote}
+$LU$, \quad $X\Lambda X^{-1}$, \quad $Q \Lambda Q^\top$
+\end{quote}
+(\emph{As usual, $L$ is lower triangular with ones on diagonal, $U$ is upper triangular, $X$ is invertible, $\Lambda$ is diagonal, and $Q$ is orthogonal.})  Explain, or show work which supports your answers.
+
+\epart{c}  By hand calculation, find $Q$ orthogonal and $\Lambda$ diagonal so that $B=Q \Lambda Q^\top$.  (\emph{Hint.  $B$ has a repeated eigenvalue $\lambda=0$, and you will need to find \emph{two} orthogonal and normalized eigenvectors for this $\lambda$.  Check your work in Matlab.})
+
+
+\prob{P60}  In this problem we consider transformations from $\bV=\RR^2$ to $\bW=\RR^2$.
+
+\epart{a} For each of these transformations, is it linear?  (\emph{Show it is, or give a counterexample.})  In either case, give a simplified formula for $T(T(\bv))$:
+\begin{itemize}
+\item $T(\bv) = -\bv$
+\item $T(\bv) = \bv + (1,1)$
+\item $T(\bv) = \left(\text{do $90^\circ$ rotation on $\bv$}\right) = (-v_2,v_1)$
+\item $T(\bv) = (\text{projection}) = \frac{1}{2} (v_1+v_2,v_1+v_2)$
+\end{itemize}
+
+\epart{b} Show that if $T$ is linear, i.e.~$T(a\bv+b\bw)=a T(\bv) + b T(\bw)$, then $T(T(\bv))$ is also linear.
+
+\medskip
+\noindent (\emph{Note that it is common in mathematics to write ``$T^2$'' for the composition $T(T(\cdot))$ of a transformation $T$ with itself, even if $T$ is not linear, and/or $T$ is not already represented by a matrix.})
+
+
+\prob{P61}  \ppart{a} Consider the vector space $\bM$ of $2$ by $2$ matrices.  Show that the transpose transformation $T$, on $\bM$, is linear: $T(A) = A^\top$.  (\emph{Hint.  Not much to do!  Fits on one line.})
+
+\epart{b}  Try to find a $2$ by $2$ matrix $B$ so that $T(A) = B A$.  Show that no such matrix $B$ exists!  (\emph{Hint.  Show that $BA=A^\top$ being true for \emph{all} matrices $A$ is impossible.})
+
+\epart{c}  If we rearrange the entries of a $2$ by $2$ matrix $A$ into a column vector $\ba$ with four entries then we can do what is asked in \textbf{(b)}.  That is, show that there is a $4\times 4$ matrix $C$ so that $C \ba$ is a column vector which is the rearrangement of $A^\top$.
+
+\end{document}
