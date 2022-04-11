@@ -48,4 +48,4 @@ worksheets:
 - name: Mon 11 April
   description: eigenstuff and diagonalization
   blank: 11apr.pdf
-  #solutions: 11apr-solns.pdf
+  solutions: 11apr-solns.pdf
