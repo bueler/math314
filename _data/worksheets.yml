@@ -45,3 +45,7 @@ worksheets:
 - name: Fri 25 March
   description: normal equations demo
   mfile: mar25.m
+- name: Mon 11 April
+  description: eigenstuff and diagonalization
+  blank: 11apr.pdf
+  #solutions: 11apr-solns.pdf
