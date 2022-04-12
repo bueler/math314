@@ -131,14 +131,14 @@
 \prob{P57}  \ppart{a} By hand calculation, find an orthogonal matrix $Q$ which diagonalizes
     $$S = \begin{bmatrix} 1 & 0 & 2 \\ 0 & -1 & -2 \\ 2 & -2 & 0 \end{bmatrix}$$
 
+\medskip
+\noindent (\emph{Hints.  Recall that if $X$ is an invertible matrix of eigenvectors of $A$ then $X$ diagonalizes $A$ in the sense that $AX=X\Lambda$ or $A=X \Lambda X^{-1}$, where $\Lambda$ is diagonal.  Recall that the columns of an orthogonal matrix are orthonormal vectors: $Q^\top Q=I$.  If $X=Q$ is orthogonal then $A=X \Lambda X^{-1}=Q \Lambda Q^\top$.})
+
 \epart{b} Check your calculation using Matlab's \texttt{eig} command
 
 \texttt{[Q,D] = eig(S)}
 
 \noindent Explain any differences between your $Q$ and the computed \texttt{Q} from Matlab.
-
-\medskip
-\noindent (\emph{Hints.  Recall that if $X$ is an invertible matrix of eigenvectors of $A$ then $X$ diagonalizes $A$ in the sense that $AX=X\Lambda$ or $A=X \Lambda X^{-1}$, where $\Lambda$ is diagonal.  Recall that the columns of an orthogonal matrix are orthonormal vectors: $Q^\top Q=I$.  If $X=Q$ is orthogonal then $A=X \Lambda X^{-1}=Q \Lambda Q^\top$.})
 
 
 \prob{P58}  \ppart{a} What matrix $A$ transforms $(1,0)$ and $(0,1)$ to $(r,s)$ and $(t,u)$?
