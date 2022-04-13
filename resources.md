@@ -21,7 +21,7 @@ title: Resources
   * [Chapter 11](https://math.mit.edu/~gs/linearalgebra/ila_sol5_ch11.pdf)
   * [Chapter 12](https://math.mit.edu/~gs/linearalgebra/ila_sol5_ch12.pdf)
 
-* Strang also made [34 video lectures on linear algebra](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/).  They are organized by topic; they do not align to the current textbook perfectly.
+* Strang also made 34 video lectures on linear algebra as part of his course [MIT 18.06SC](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/).  They are organized by topic; they do not align to the current textbook perfectly.
 
 * All in one picture: [Matrix world.](assets/images/matrix-world.pdf)
 
