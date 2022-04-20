@@ -49,3 +49,6 @@ worksheets:
   description: eigenstuff and diagonalization
   blank: 11apr.pdf
   solutions: 11apr-solns.pdf
+- name: Wed 20 April
+  description: plot2d for house plots
+  mfile: plot2d.m
