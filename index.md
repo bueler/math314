@@ -9,6 +9,12 @@ Welcome to the homepage of **Math F314 Linear Algebra**, Spring 2022, in the [De
 
 I hold [office hours](http://bueler.github.io/OffHrs.htm) in Chapman 306C.
 
+### Final Exam!
+
+Review Session: Wednesday 4/27 in Chapman 104, 4:30 -- 6:00 pm
+
+Final Exam: Friday 4/29 in Gruening 413, 8:00 -- 10:00 am
+
 ### [--> Canvas course page](https://canvas.alaska.edu/courses/7017)
 
 Go to the [Canvas course page](https://canvas.alaska.edu/courses/7017) for uploading Homework, finding solutions, and seeing your grades.
