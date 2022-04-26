@@ -24,6 +24,7 @@ exams:
     - semester: Fall 2014
       home: assets/rhodes
       blank: final-2014.pdf
+      solutions: final-2014-solns.pdf
     - semester: Spring 2013
       home: assets/rhodes
       blank: final-2013.pdf
